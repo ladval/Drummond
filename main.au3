@@ -1,11 +1,10 @@
 #cs ----------------------------------------------------------------------------
 
  AutoIt Version: 3.3.14.5
- Author:         myName
+ Author:         Jesús Antonio Ladino Valbuena
 
  Script Function:
-	Template AutoIt script.
+	Generación de reporte de Drummond
 
 #ce ----------------------------------------------------------------------------
 
-; Script Start - Add your code below here
