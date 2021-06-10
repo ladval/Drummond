@@ -1,0 +1,8 @@
+{
+    "conn": {
+        "instancia": "172.16.10.16\\DBABC21",
+        "db": "BotAbc",
+        "user": "Operativo",
+        "pass": "Repecev2019*"
+    }
+}
