@@ -1,8 +1,11 @@
 #cs ----------------------------------------------------------------------------
+
  AutoIt Version: 3.3.14.5
  Author:         Jesús Antonio Ladino Valbuena
+
  Script Function:
 	Generación de reporte de Drummond
+
 #ce ----------------------------------------------------------------------------
 
 #include <File.au3>
@@ -12,6 +15,7 @@
 #include "modulo_json.au3"
 #include "modulo_sql.au3"
 #include "modulo_misc.au3"
+
 
 Local $sCosteoDrummond
 $sCosteoDrummond &= "SELECT VCosteoDrummond_fact.FACTURASERVICIOS, "
@@ -54,4 +58,4 @@ $sCosteoDrummond &= "INCOTERM"
 $sCosteoDrummond &= "FROM Repecev2005.dbo.VCosteoDrummond_fact VCosteoDrummond_fact"
 $sCosteoDrummond &= "WHERE FECHAFACTURA  BETWEEN  '22/04/2021' and '24/04/2021'"
 
-ConsoleWrite($sCosteoDrummond & @CRLF)
+ConsoleWrite($sCosteoDrummond&@CRLF)
