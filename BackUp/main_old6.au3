@@ -52,20 +52,24 @@ $sCosteoDrummond &= "VALORFOBDIM," & @CRLF
 $sCosteoDrummond &= "CONTENEDORES," & @CRLF
 $sCosteoDrummond &= "INCOTERM" & @CRLF
 $sCosteoDrummond &= "FROM Repecev2005.dbo.VCosteoDrummond_fact" & @CRLF
-$sCosteoDrummond &= "WHERE FECHAFACTURA  BETWEEN  '31/05/2021' and '12/06/2021'"
+$sCosteoDrummond &= "WHERE FECHAFACTURA  BETWEEN  '01/06/2021' and '10/06/2021'"
 Local $a2D = _ModuloSQL_SQL_SELECT($sCosteoDrummond)
-_ArrayDisplay($a2D, '$a2D')
+_ArrayDisplay($a2D,'$a2D')
+
 $a2D = dupecheckerthingy($a2D)
-_ArrayDisplay($a2D, '$a2D')
-
-Func dupecheckerthingy($aArray)
-	Local $aTempArray[1] = ['']
-	For $i = 1 To UBound($aArray) - 1
-		_ArraySearch($aTempArray, $aArray[$i][0])
-		If @error Then _ArrayAdd($aTempArray, $aArray[$i][0])
-	Next
-	$aTempArray[0] = UBound($aTempArray) - 1
-	Return $aTempArray
-EndFunc   ;==>dupecheckerthingy
+_ArrayDisplay($a2D,'$a2D')
 
 
+
+Func dupecheckerthingy($showmethearray)
+    Local $tmparray[1] = ['']
+    For $i = 1 To UBound($showmethearray) - 1
+        _ArraySearch($tmparray, $showmethearray[$i][0])
+        If @error Then _ArrayAdd($tmparray, $showmethearray[$i][0])
+    Next
+    $tmparray[0] = 'Number of elements = ' & UBound($tmparray) - 1
+    Return $tmparray
+EndFunc
+
+
+_ArrayDisplay($a2D)

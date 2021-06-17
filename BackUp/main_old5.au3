@@ -52,20 +52,50 @@ $sCosteoDrummond &= "VALORFOBDIM," & @CRLF
 $sCosteoDrummond &= "CONTENEDORES," & @CRLF
 $sCosteoDrummond &= "INCOTERM" & @CRLF
 $sCosteoDrummond &= "FROM Repecev2005.dbo.VCosteoDrummond_fact" & @CRLF
-$sCosteoDrummond &= "WHERE FECHAFACTURA  BETWEEN  '31/05/2021' and '12/06/2021'"
-Local $a2D = _ModuloSQL_SQL_SELECT($sCosteoDrummond)
-_ArrayDisplay($a2D, '$a2D')
-$a2D = dupecheckerthingy($a2D)
-_ArrayDisplay($a2D, '$a2D')
-
-Func dupecheckerthingy($aArray)
-	Local $aTempArray[1] = ['']
-	For $i = 1 To UBound($aArray) - 1
-		_ArraySearch($aTempArray, $aArray[$i][0])
-		If @error Then _ArrayAdd($aTempArray, $aArray[$i][0])
-	Next
-	$aTempArray[0] = UBound($aTempArray) - 1
-	Return $aTempArray
-EndFunc   ;==>dupecheckerthingy
+$sCosteoDrummond &= "WHERE FECHAFACTURA  BETWEEN  '01/06/2021' and '10/06/2021'"
+Local $aCosteoDrummond = _ModuloSQL_SQL_SELECT($sCosteoDrummond)
+_ArrayDisplay($aCosteoDrummond, '$aCosteoDrummond')
 
 
+
+
+
+
+Local $aMult = _ArrayNoSingles($aCosteoDrummond)
+
+Func _ArrayNoSingles($aArray)
+    ; Create dictionary
+    Local $oDict = ObjCreate("Scripting.Dictionary")
+    For $i = 0 To UBound($aArray) - 1
+        $vElem = $aArray[$i][0]
+        $vUnique = StringSplit($vElem, "|")[3] ; Get the unique element at the end of the string
+        ; Check if already in dictionary
+        If $oDict.Exists($vUnique) Then
+            ; Add whole element to existing list
+            $oDict($vUnique) = $oDict($vUnique) & "#" & $vElem ; <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+        Else
+            ; Add whole element to dictionary
+            $oDict.Item($vUnique) = $vElem
+        EndIf
+    Next
+    ; Create return array large enough for all elements
+    Local $aRet[UBound($aArray) + 1], $iIndex = 0
+    ; Loop through dictionary and transfer multiple elements to return array
+    For $vKey in $oDict
+        $vValue = $oDict($vKey)
+        ; Check if more than one delimiter
+        StringReplace($vValue, "#", "&")  ; <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+        If @extended Then
+            $aSplit = StringSplit($vValue, "#")  ; <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+            For $i = 1 To $aSplit[0]
+                $iIndex += 1
+                $aRet[$iIndex] = $aSplit[$i]
+            Next
+        EndIf
+    Next
+    ; Add count to [0]element
+    $aRet[0] = $iIndex
+    ; Remove ampty elements of return array
+    ReDim $aRet[$iIndex + 1]
+    Return $aRet
+EndFunc

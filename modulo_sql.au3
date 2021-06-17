@@ -28,7 +28,7 @@ Func _ModuloSQL_SQL_SELECT($Query)
 	Local $iRows, $iColumns
 	$iRval = _SQL_GetTable2D(-1, $Query, $aData, $iRows, $iColumns)
 	If $iRval = $SQL_OK Then
-		_SQL_Close()
+		_SQL_Close() 
 		Return $aData
 	Else
 		_SQL_Close()
