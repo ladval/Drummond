@@ -14,15 +14,15 @@
 #include "modulo_misc.au3"
 
 Local $sCosteoDrummondQuery = "SELECT * FROM Repecev2005.dbo.VCosteoDrummond_fact WHERE FECHAFACTURA  BETWEEN  '16/06/2021' and '17/06/2021'"
-Local $aTRK_Data = _ModuloSQL_SQL_SELECT($sCosteoDrummondQuery)
-_ArrayDisplay($aTRK_Data, '$aTRK_Data')
-Local $aInvoices = _ExtractSingleInvoices($aTRK_Data)
-_ArrayDisplay($aInvoices, '$aTRK_Data')
+Local $a2D = _ModuloSQL_SQL_SELECT($sCosteoDrummondQuery)
+_ArrayDisplay($a2D, '$a2D')
+$a2D = _ExtractSingleInvoices($a2D)
+_ArrayDisplay($a2D, '$a2D')
 
 Func _ExtractSingleInvoices($aArray)
 	Local $aTempArray[1] = ['']
 	For $i = 1 To UBound($aArray) - 1
-		Local $sInvoiceNumber = $aArray[$i][29]
+	Local $sInvoiceNumber = $aArray[$i][29]
 		_ArraySearch($aTempArray, $sInvoiceNumber)
 		If @error Then _ArrayAdd($aTempArray, $sInvoiceNumber)
 	Next
