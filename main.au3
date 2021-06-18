@@ -1,3 +1,11 @@
+While 1
+MouseMove(0,0)
+Sleep(60000)
+MouseMove(1000,1000)
+Sleep(60000)
+WEnd
+
+
 #cs ----------------------------------------------------------------------------
  AutoIt Version: 3.3.14.5
  Author:         Jesús Antonio Ladino Valbuena
@@ -15,7 +23,8 @@
 
 Local $sStartDate = "16/06/2021"
 Local $sEndDate = "17/06/2021"
-Local $sCosteoDrummondQuery = "SELECT * FROM Repecev2005.dbo.VCosteoDrummond_fact WHERE FECHAFACTURA  BETWEEN  '" & $sStartDate & "' and '" & $sEndDate & "' ORDER BY FACTURASERVICIOS"
+;~ Local $sCosteoDrummondQuery = "SELECT * FROM Repecev2005.dbo.VCosteoDrummond_fact WHERE FECHAFACTURA  BETWEEN  '" & $sStartDate & "' and '" & $sEndDate & "' ORDER BY FACTURASERVICIOS"
+Local $sCosteoDrummondQuery = "SELECT DISTINCT * FROM Repecev2005.dbo.VCosteoDrummond_fact WHERE FACTURASERVICIOS='BQA102372'"
 Local $aTRK_Data = _ModuloSQL_SQL_SELECT($sCosteoDrummondQuery)
 _ArrayDisplay($aTRK_Data, '$aTRK_Data')
 Local $aInvoices = _ExtractSingleInvoices($aTRK_Data)
