@@ -21,10 +21,7 @@ Local $sJsonFactQuery = "SELECT JsonFact FROM [BotAbc].[dbo].[tfact_ApiProcesos]
 Local $aTRK_Data = _ModuloSQL_SQL_SELECT($sCosteoDrummondQuery)
 Local $aAPI_Data = _ModuloSQL_SQL_SELECT($sJsonFactQuery)
 Local $sJsonFact = $aAPI_Data[1][0]
-Local $sJSON_InvoiceData = @ScriptDir & '\data\' & $sSQL_InvoiceNumber & '.json'
-_SaveDataToFile($sJSON_InvoiceData, $sJsonFact)
-Exit
-
+Local $sJSON_InvoiceData = @ScriptDir&'\data\'&$sSQL_InvoiceNumber&'.json'
 
 _ArrayDisplay($aAPI_Data, '$aAPI_Data')
 _ArrayDisplay($aTRK_Data, '$aTRK_Data')
