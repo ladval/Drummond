@@ -13,20 +13,19 @@
 #include "modulo_sql.au3"
 #include "modulo_misc.au3"
 
-Local $sStartDate = "16/06/2021"
-Local $sEndDate = "17/06/2021"
-Local $sCosteoDrummondQuery = "SELECT * FROM Repecev2005.dbo.VCosteoDrummond_fact WHERE FECHAFACTURA  BETWEEN  '" & $sStartDate & "' and '" & $sEndDate & "' ORDER BY FACTURASERVICIOS"
+Local $sCosteoDrummondQuery = "SELECT * FROM Repecev2005.dbo.VCosteoDrummond_fact WHERE FECHAFACTURA  BETWEEN  '16/06/2021' and '17/06/2021'"
 Local $aTRK_Data = _ModuloSQL_SQL_SELECT($sCosteoDrummondQuery)
-_ArrayDisplay($aTRK_Data, '$aTRK_Data')
+;~ _ArrayDisplay($aTRK_Data, '$aTRK_Data')
 Local $aInvoices = _ExtractSingleInvoices($aTRK_Data)
-_ArrayDisplay($aInvoices, '$aInvoices')
+;~ _ArrayDisplay($aInvoices, '$aInvoices')
+
+
 For $i = 1 To UBound($aInvoices) - 1 Step +1 ;Starts at 1. First position indicates invoices amount.
 	Local $sInvoiceNumber = $aInvoices[$i]
-	Local $aInvoiceCoincidences = _ArrayFindAll($aTRK_Data, $sInvoiceNumber, Default, Default, Default, Default, 29, False)
-	_ArrayDisplay($aInvoiceCoincidences, $sInvoiceNumber)
+		_ArrayFindAll($aTRK_Data, $sInvoiceNumber,Default,Default,Default,Default,29,False)
 Next
 
-;~ _ArrayDisplay($aInvoices, '$aTRK_Data')
+_ArrayDisplay($aInvoices, '$aTRK_Data')
 
 Func _ExtractSingleInvoices($aArray)
 	Local $aTempArray[1] = ['']

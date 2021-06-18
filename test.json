@@ -1,32 +1,32 @@
 {
     "CustomerInformation": {
         "IdentificationType": 31,
-        "Identification": "900795808",
+        "Identification": "830095854",
         "DV": "1",
-        "RegistrationName": "SAMSUNG SDS GLOBAL SCL COLOMBIA  S.A.S",
+        "RegistrationName": "UPL COLOMBIA SAS",
         "CountryCode": "CO",
         "CountryName": "COLOMBIA",
         "SubdivisionCode": "11",
-        "SubdivisionName": "BOGOT\u00c1 ",
+        "SubdivisionName": "BOGOTu00c1, D.C.",
         "CityCode": "11001",
-        "CityName": "BOGOT\u00c1, D.C.",
-        "AddressLine": "PAR EMPRES LA COFRADIA VIA SIBERIA MOSQUERA KM 2 B",
-        "Telephone": "4849190",
-        "Email": "facturacion.opr@samsung.com,facturacion-noreply@abcrepecev.com",
+        "CityName": "BOGOTu00c1, D.C.",
+        "AddressLine": "CL 127 A 53A 45 CENTRO EMPRESARIAL COLPATRIA TO 2",
+        "Telephone": "5111888",
+        "Email": "factura.electronicacol@upl-ltd.com,facturacion-noreply@abcrepecev.com",
         "CustomerCode": "",
         "AdditionalAccountID": "1",
         "TaxLevelCodeListName": "48",
-        "PostalZone": "250020",
+        "PostalZone": "110011",
         "TaxSchemeCode": "01",
         "TaxSchemeName": "IVA",
-        "FiscalResponsabilities": "O-13",
+        "FiscalResponsabilities": "O-23",
         "PartecipationPercent": "",
         "AdditionalCustomer": []
     },
     "InvoiceGeneralInformation": {
-        "InvoiceAuthorizationNumber": "18764004067561",
-        "PreinvoiceNumber": 183743,
-        "InvoiceNumber": "183743",
+        "InvoiceAuthorizationNumber": "18763002723655",
+        "PreinvoiceNumber": 93031,
+        "InvoiceNumber": "93031",
         "DaysOff": "29",
         "Currency": "COP",
         "ExchangeRate": 0,
@@ -36,7 +36,7 @@
         "ExternalGR": true
     },
     "Delivery": {
-        "AddressLine": "PAR EMPRES LA COFRADIA VIA SIBERIA MOSQUERA KM 2 B",
+        "AddressLine": "CL 127 A 53A 45 CENTRO EMPRESARIAL COLPATRIA TO 2",
         "CountryCode": "",
         "CountryName": "",
         "SubdivisionCode": "",
@@ -44,7 +44,7 @@
         "CityCode": "",
         "CityName": "",
         "ContactPerson": "",
-        "DeliveryDate": "2021-06-11T15:30:32",
+        "DeliveryDate": "2021-06-17T13:07:11",
         "DeliveryCompany": ""
     },
     "AdditionalDocuments": {
@@ -70,16 +70,16 @@
             "Value": "0"
         },
         {
-            "Name": "AWL\/BL",
-            "Value": "RITTAL GMBH"
+            "Name": "AWL/BL",
+            "Value": "UPL LIMITED         "
         },
         {
             "Name": "SUC",
-            "Value": "TEST1"
+            "Value": ""
         },
         {
             "Name": "Peso:",
-            "Value": "TEST2"
+            "Value": ""
         },
         {
             "Name": "Piezas:",
@@ -87,35 +87,35 @@
         },
         {
             "Name": "Concepto o Referencia:",
-            "Value": "TEST4"
+            "Value": "9800001207"
         },
         {
             "Name": "No",
-            "Value": "439909368211                  "
+            "Value": "585408046215                  "
         },
         {
             "Name": "Valor en letras:",
-            "Value": "OCHOCIENTOS TRECE MIL SEISCIENTOS SESENTA PESOS MCTE"
+            "Value": "TREINTA Y TRES MILLONES NOVECIENTOS CUARENTA Y CUATRO MIL OCHOCIENTOS CINCUENTA Y UN PESOS MCTE"
         },
         {
             "Name": "Valor mercancia:",
-            "Value": "TEST5"
+            "Value": ""
         },
         {
             "Name": "Observaciones:",
-            "Value": "NAC: 401529"
+            "Value": "NAC: 399925"
         },
         {
             "Name": "Vencimiento:",
-            "Value": "2021-06-11"
+            "Value": "2021-07-14"
         },
         {
             "Name": "TRM:",
-            "Value": "TEST6"
+            "Value": ""
         },
         {
             "Name": "JefeCuenta:",
-            "Value": "APONTE HERNANDEZ JULIAN"
+            "Value": "PARRA GONZALEZ DANIEL FERNANDO"
         }
     ],
     "PaymentSummary": {
@@ -125,15 +125,195 @@
     },
     "ItemInformation": [
         {
-            "ItemReference": "1004",
-            "Name": "TAESCOL 30333\/552 MANEJO DE GUIAS",
+            "ItemReference": "1023",
+            "Name": "ICA 982588054",
             "Quatity": 1,
-            "Price": 810418,
+            "Price": 89373,
             "LineAllowanceTotal": 0,
             "LineChargeTotal": 0,
             "LineTotalTaxes": 0,
-            "LineTotal": 810418,
-            "LineExtensionAmount": 810418,
+            "LineTotal": 89373,
+            "LineExtensionAmount": 89373,
+            "MeasureUnitCode": "94",
+            "FreeOFChargeIndicator": 0,
+            "AdditionalReference": [],
+            "AdditionalProperty": [
+                {
+                    "Name": "Tipo de Ingreso",
+                    "Value": "TERCERO"
+                }
+            ],
+            "TaxesInformation": [],
+            "AllowanceCharge": [],
+            "InvoiceMandateInformation": {
+                "Mandate": {
+                    "IdentificationType": "",
+                    "Identification": "",
+                    "RegistrationName": "",
+                    "DV": ""
+                }
+            }
+        },
+        {
+            "ItemReference": "1006",
+            "Name": "COMNSOLCARGO FC 124080 MANEJO DOCUMENTOS",
+            "Quatity": 1,
+            "Price": 7054442,
+            "LineAllowanceTotal": 0,
+            "LineChargeTotal": 0,
+            "LineTotalTaxes": 0,
+            "LineTotal": 7054442,
+            "LineExtensionAmount": 7054442,
+            "MeasureUnitCode": "94",
+            "FreeOFChargeIndicator": 0,
+            "AdditionalReference": [],
+            "AdditionalProperty": [
+                {
+                    "Name": "Tipo de Ingreso",
+                    "Value": "TERCERO"
+                }
+            ],
+            "TaxesInformation": [],
+            "AllowanceCharge": [],
+            "InvoiceMandateInformation": {
+                "Mandate": {
+                    "IdentificationType": "",
+                    "Identification": "",
+                    "RegistrationName": "",
+                    "DV": ""
+                }
+            }
+        },
+        {
+            "ItemReference": "1003",
+            "Name": "TCBUEN FC 11933237 USO INSTALACIONES",
+            "Quatity": 1,
+            "Price": 1520743,
+            "LineAllowanceTotal": 0,
+            "LineChargeTotal": 0,
+            "LineTotalTaxes": 0,
+            "LineTotal": 1520743,
+            "LineExtensionAmount": 1520743,
+            "MeasureUnitCode": "94",
+            "FreeOFChargeIndicator": 0,
+            "AdditionalReference": [],
+            "AdditionalProperty": [
+                {
+                    "Name": "Tipo de Ingreso",
+                    "Value": "TERCERO"
+                }
+            ],
+            "TaxesInformation": [],
+            "AllowanceCharge": [],
+            "InvoiceMandateInformation": {
+                "Mandate": {
+                    "IdentificationType": "",
+                    "Identification": "",
+                    "RegistrationName": "",
+                    "DV": ""
+                }
+            }
+        },
+        {
+            "ItemReference": "1004",
+            "Name": "TCBUEN FC 11933238/11934873 ALMACENAMIENTO",
+            "Quatity": 1,
+            "Price": 12928335,
+            "LineAllowanceTotal": 0,
+            "LineChargeTotal": 0,
+            "LineTotalTaxes": 0,
+            "LineTotal": 12928335,
+            "LineExtensionAmount": 12928335,
+            "MeasureUnitCode": "94",
+            "FreeOFChargeIndicator": 0,
+            "AdditionalReference": [],
+            "AdditionalProperty": [
+                {
+                    "Name": "Tipo de Ingreso",
+                    "Value": "TERCERO"
+                }
+            ],
+            "TaxesInformation": [],
+            "AllowanceCharge": [],
+            "InvoiceMandateInformation": {
+                "Mandate": {
+                    "IdentificationType": "",
+                    "Identification": "",
+                    "RegistrationName": "",
+                    "DV": ""
+                }
+            }
+        },
+        {
+            "ItemReference": "1004",
+            "Name": "TCBUEN FC 11935754/11937626 ALMACENAMIENTO",
+            "Quatity": 1,
+            "Price": 3258865,
+            "LineAllowanceTotal": 0,
+            "LineChargeTotal": 0,
+            "LineTotalTaxes": 0,
+            "LineTotal": 3258865,
+            "LineExtensionAmount": 3258865,
+            "MeasureUnitCode": "94",
+            "FreeOFChargeIndicator": 0,
+            "AdditionalReference": [],
+            "AdditionalProperty": [
+                {
+                    "Name": "Tipo de Ingreso",
+                    "Value": "TERCERO"
+                }
+            ],
+            "TaxesInformation": [],
+            "AllowanceCharge": [],
+            "InvoiceMandateInformation": {
+                "Mandate": {
+                    "IdentificationType": "",
+                    "Identification": "",
+                    "RegistrationName": "",
+                    "DV": ""
+                }
+            }
+        },
+        {
+            "ItemReference": "1004",
+            "Name": "TCBUEN FC 11940696/11939723 CAMBIO/ALMACENA",
+            "Quatity": 1,
+            "Price": 5026456,
+            "LineAllowanceTotal": 0,
+            "LineChargeTotal": 0,
+            "LineTotalTaxes": 0,
+            "LineTotal": 5026456,
+            "LineExtensionAmount": 5026456,
+            "MeasureUnitCode": "94",
+            "FreeOFChargeIndicator": 0,
+            "AdditionalReference": [],
+            "AdditionalProperty": [
+                {
+                    "Name": "Tipo de Ingreso",
+                    "Value": "TERCERO"
+                }
+            ],
+            "TaxesInformation": [],
+            "AllowanceCharge": [],
+            "InvoiceMandateInformation": {
+                "Mandate": {
+                    "IdentificationType": "",
+                    "Identification": "",
+                    "RegistrationName": "",
+                    "DV": ""
+                }
+            }
+        },
+        {
+            "ItemReference": "1004",
+            "Name": "TCBUEN FC 11940876 ALMACENAMIENTO",
+            "Quatity": 1,
+            "Price": 2164888,
+            "LineAllowanceTotal": 0,
+            "LineChargeTotal": 0,
+            "LineTotalTaxes": 0,
+            "LineTotal": 2164888,
+            "LineExtensionAmount": 2164888,
             "MeasureUnitCode": "94",
             "FreeOFChargeIndicator": 0,
             "AdditionalReference": [],
@@ -156,14 +336,14 @@
         },
         {
             "ItemReference": "1030",
-            "Name": "VR.4x1000 Ley 863 dic.29\/2003 S$810.418",
+            "Name": "VR.4x1000 Ley 863 dic.29/2003 S$32.043.102",
             "Quatity": 1,
-            "Price": 3242,
+            "Price": 128172,
             "LineAllowanceTotal": 0,
             "LineChargeTotal": 0,
             "LineTotalTaxes": 0,
-            "LineTotal": 3242,
-            "LineExtensionAmount": 3242,
+            "LineTotal": 128172,
+            "LineExtensionAmount": 128172,
             "MeasureUnitCode": "94",
             "FreeOFChargeIndicator": 0,
             "AdditionalReference": [],
@@ -183,30 +363,240 @@
                     "DV": ""
                 }
             }
+        },
+        {
+            "ItemReference": "2003",
+            "Name": "SERV AGENCIAMIENTO INTEGRAL $733.896.549",
+            "Quatity": 1,
+            "Price": 1321014,
+            "LineAllowanceTotal": 0,
+            "LineChargeTotal": 0,
+            "LineTotalTaxes": 250993,
+            "LineTotal": 1572007,
+            "LineExtensionAmount": 1321014,
+            "MeasureUnitCode": "94",
+            "FreeOFChargeIndicator": 0,
+            "AdditionalReference": [],
+            "AdditionalProperty": [
+                {
+                    "Name": "Tipo de Ingreso",
+                    "Value": "PROPIO"
+                }
+            ],
+            "TaxesInformation": [
+                {
+                    "Id": "01",
+                    "TaxEvidenceIndicator": false,
+                    "TaxableAmount": 1321014,
+                    "TaxAmount": 250993,
+                    "Percent": 19,
+                    "BaseUnitMeasure": "",
+                    "PerUnitAmount": ""
+                }
+            ],
+            "AllowanceCharge": [],
+            "InvoiceMandateInformation": {
+                "Mandate": {
+                    "IdentificationType": "",
+                    "Identification": "",
+                    "RegistrationName": "",
+                    "DV": ""
+                }
+            }
+        },
+        {
+            "ItemReference": "2004",
+            "Name": "VR.GASTOS VARIOS",
+            "Quatity": 1,
+            "Price": 89271,
+            "LineAllowanceTotal": 0,
+            "LineChargeTotal": 0,
+            "LineTotalTaxes": 16961,
+            "LineTotal": 106232,
+            "LineExtensionAmount": 89271,
+            "MeasureUnitCode": "94",
+            "FreeOFChargeIndicator": 0,
+            "AdditionalReference": [],
+            "AdditionalProperty": [
+                {
+                    "Name": "Tipo de Ingreso",
+                    "Value": "PROPIO"
+                }
+            ],
+            "TaxesInformation": [
+                {
+                    "Id": "01",
+                    "TaxEvidenceIndicator": false,
+                    "TaxableAmount": 89271,
+                    "TaxAmount": 16961,
+                    "Percent": 19,
+                    "BaseUnitMeasure": "",
+                    "PerUnitAmount": ""
+                }
+            ],
+            "AllowanceCharge": [],
+            "InvoiceMandateInformation": {
+                "Mandate": {
+                    "IdentificationType": "",
+                    "Identification": "",
+                    "RegistrationName": "",
+                    "DV": ""
+                }
+            }
+        },
+        {
+            "ItemReference": "2009",
+            "Name": "VR.ELAB.DECLARAC. IMPORTAC Y/O VALOR X4",
+            "Quatity": 1,
+            "Price": 48528,
+            "LineAllowanceTotal": 0,
+            "LineChargeTotal": 0,
+            "LineTotalTaxes": 9220,
+            "LineTotal": 57748,
+            "LineExtensionAmount": 48528,
+            "MeasureUnitCode": "94",
+            "FreeOFChargeIndicator": 0,
+            "AdditionalReference": [],
+            "AdditionalProperty": [
+                {
+                    "Name": "Tipo de Ingreso",
+                    "Value": "PROPIO"
+                }
+            ],
+            "TaxesInformation": [
+                {
+                    "Id": "01",
+                    "TaxEvidenceIndicator": false,
+                    "TaxableAmount": 48528,
+                    "TaxAmount": 9220,
+                    "Percent": 19,
+                    "BaseUnitMeasure": "",
+                    "PerUnitAmount": ""
+                }
+            ],
+            "AllowanceCharge": [],
+            "InvoiceMandateInformation": {
+                "Mandate": {
+                    "IdentificationType": "",
+                    "Identification": "",
+                    "RegistrationName": "",
+                    "DV": ""
+                }
+            }
+        },
+        {
+            "ItemReference": "2008",
+            "Name": "PROC DECLARAC.SIGLO XXI Y/O MUISCA X2",
+            "Quatity": 1,
+            "Price": 19456,
+            "LineAllowanceTotal": 0,
+            "LineChargeTotal": 0,
+            "LineTotalTaxes": 3697,
+            "LineTotal": 23153,
+            "LineExtensionAmount": 19456,
+            "MeasureUnitCode": "94",
+            "FreeOFChargeIndicator": 0,
+            "AdditionalReference": [],
+            "AdditionalProperty": [
+                {
+                    "Name": "Tipo de Ingreso",
+                    "Value": "PROPIO"
+                }
+            ],
+            "TaxesInformation": [
+                {
+                    "Id": "01",
+                    "TaxEvidenceIndicator": false,
+                    "TaxableAmount": 19456,
+                    "TaxAmount": 3697,
+                    "Percent": 19,
+                    "BaseUnitMeasure": "",
+                    "PerUnitAmount": ""
+                }
+            ],
+            "AllowanceCharge": [],
+            "InvoiceMandateInformation": {
+                "Mandate": {
+                    "IdentificationType": "",
+                    "Identification": "",
+                    "RegistrationName": "",
+                    "DV": ""
+                }
+            }
+        },
+        {
+            "ItemReference": "2045",
+            "Name": "VR.TRAMITE VoBo ICA",
+            "Quatity": 1,
+            "Price": 12132,
+            "LineAllowanceTotal": 0,
+            "LineChargeTotal": 0,
+            "LineTotalTaxes": 2305,
+            "LineTotal": 14437,
+            "LineExtensionAmount": 12132,
+            "MeasureUnitCode": "94",
+            "FreeOFChargeIndicator": 0,
+            "AdditionalReference": [],
+            "AdditionalProperty": [
+                {
+                    "Name": "Tipo de Ingreso",
+                    "Value": "PROPIO"
+                }
+            ],
+            "TaxesInformation": [
+                {
+                    "Id": "01",
+                    "TaxEvidenceIndicator": false,
+                    "TaxableAmount": 12132,
+                    "TaxAmount": 2305,
+                    "Percent": 19,
+                    "BaseUnitMeasure": "",
+                    "PerUnitAmount": ""
+                }
+            ],
+            "AllowanceCharge": [],
+            "InvoiceMandateInformation": {
+                "Mandate": {
+                    "IdentificationType": "",
+                    "Identification": "",
+                    "RegistrationName": "",
+                    "DV": ""
+                }
+            }
         }
     ],
-    "InvoiceTaxTotal": [],
+    "InvoiceTaxTotal": [
+        {
+            "Id": "01",
+            "TaxEvidenceIndicator": false,
+            "TaxableAmount": 1490401,
+            "TaxAmount": 283176,
+            "Percent": 19,
+            "BaseUnitMeasure": "",
+            "PerUnitAmount": ""
+        }
+    ],
     "InvoiceAllowanceCharge": [],
     "InvoiceTotalOwn": {
-        "LineExtensionAmount": 0,
-        "TaxExclusiveAmount": 0,
-        "TaxAmount": 0,
-        "PayableAmount": 0
+        "LineExtensionAmount": 1490401,
+        "TaxExclusiveAmount": 1490401,
+        "TaxAmount": 283176,
+        "PayableAmount": 1773577
     },
     "InvoiceTotalOthers": {
-        "LineExtensionAmount": 813660,
+        "LineExtensionAmount": 32171274,
         "TaxExclusiveAmount": 0,
         "TaxAmount": 0,
-        "PayableAmount": 813660
+        "PayableAmount": 32171274
     },
     "InvoiceTotal": {
-        "LineExtensionAmount": 813660,
-        "TaxExclusiveAmount": 0,
-        "TaxInclusiveAmount": 813660,
+        "LineExtensionAmount": 33661675,
+        "TaxExclusiveAmount": 1490401,
+        "TaxInclusiveAmount": 33944851,
         "AllowanceTotalAmount": 0,
         "ChargeTotalAmount": 0,
         "PrePaidAmount": 0,
-        "PayableAmount": 813660
+        "PayableAmount": 33944851
     },
     "Documents": []
 }
