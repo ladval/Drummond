@@ -16,18 +16,19 @@
 ;~ Local $sEndDate = "17/06/2021"
 ;~ Local $sCosteoDrummondQuery = "SELECT * FROM Repecev2005.dbo.VCosteoDrummond_fact WHERE FECHAFACTURA  BETWEEN  '" & $sStartDate & "' and '" & $sEndDate & "' ORDER BY FACTURASERVICIOS"
 Local $sSQL_InvoiceNumber = "BQA102372"
-Local $sCosteoDrummondQuery = "SELECT * FROM [Repecev2005].[dbo].[VCosteoDrummond_fact] WHERE FACTURASERVICIOS='" & $sSQL_InvoiceNumber & "'"
+Local $sCosteoDrummondQuery = "SELECT * FROM [Repecev2005].[dbo].[VCosteoDrummond_fact] WHERE FACTURASERVICIOS LIKE '" & $sSQL_InvoiceNumber & "'"
 Local $sJsonFactQuery = "SELECT JsonFact FROM [BotAbc].[dbo].[tfact_ApiProcesos] where InvoiceNumber = '" & $sSQL_InvoiceNumber & "'"
 Local $aTRK_Data = _ModuloSQL_SQL_SELECT($sCosteoDrummondQuery)
 Local $aAPI_Data = _ModuloSQL_SQL_SELECT($sJsonFactQuery)
 Local $sJsonFact = $aAPI_Data[1][0]
-Local $sJSON_InvoiceData = @ScriptDir & '\data\' & $sSQL_InvoiceNumber & '.json'
-_SaveDataToFile($sJSON_InvoiceData, $sJsonFact)
+Local $sJsonFile_InvoiceData = @ScriptDir & '\data\' & $sSQL_InvoiceNumber & '.json'
+_ArrayDisplay($aTRK_Data, '$aTRK_Data')
+_SaveDataToFile($sJsonFile_InvoiceData, $sJsonFact)
+Local $sJsonInvoiceData = _ReadDataFromFile($sJsonFile_InvoiceData)
+Json_Dump($sJsonInvoiceData)
 Exit
 
 
-_ArrayDisplay($aAPI_Data, '$aAPI_Data')
-_ArrayDisplay($aTRK_Data, '$aTRK_Data')
 Local $aInvoices = _ExtractSingleInvoices($aTRK_Data)
 _ArrayDisplay($aInvoices, '$aInvoices')
 For $i = 1 To UBound($aInvoices) - 1 Step +1 ;Starts at 1. First position indicates invoices amount.

@@ -1,42 +1,42 @@
 {
     "CustomerInformation": {
         "IdentificationType": 31,
-        "Identification": "800162592",
-        "DV": "5",
-        "RegistrationName": "MATERIALES EL ORIENTE S.A.S",
+        "Identification": "860001899",
+        "DV": "9",
+        "RegistrationName": "CORPACERO S. A. S.",
         "CountryCode": "CO",
         "CountryName": "COLOMBIA",
-        "SubdivisionCode": "11",
-        "SubdivisionName": "BOGOTu00c1 ",
-        "CityCode": "11001",
-        "CityName": "BOGOTu00c1, D.C.",
-        "AddressLine": "CR 72 Q 37 14 SUR",
-        "Telephone": "4506366",
-        "Email": "recibofe@materialeseloriente.com,facturacion-noreply@abcrepecev.com",
+        "SubdivisionCode": "08",
+        "SubdivisionName": "ATL\u00c1NTICO",
+        "CityCode": "8001",
+        "CityName": "BARRANQUILLA",
+        "AddressLine": "VIA 40 76 188",
+        "Telephone": "3851515",
+        "Email": "eroa@corpacero.com,facturacion-noreply@abccargolog.com",
         "CustomerCode": "",
         "AdditionalAccountID": "1",
         "TaxLevelCodeListName": "48",
-        "PostalZone": "110111",
+        "PostalZone": "080001",
         "TaxSchemeCode": "01",
         "TaxSchemeName": "IVA",
-        "FiscalResponsabilities": "O-23",
+        "FiscalResponsabilities": "O-13",
         "PartecipationPercent": "",
         "AdditionalCustomer": []
     },
     "InvoiceGeneralInformation": {
-        "InvoiceAuthorizationNumber": "18763002723655",
-        "PreinvoiceNumber": 93105,
-        "InvoiceNumber": "93105",
+        "InvoiceAuthorizationNumber": "18763002568247",
+        "PreinvoiceNumber": 52051,
+        "InvoiceNumber": "52051",
         "DaysOff": "0",
-        "Currency": "COP",
-        "ExchangeRate": 0,
+        "Currency": "USD",
+        "ExchangeRate": 3760.45,
         "ExchangeRateDate": "",
         "SalesPerson": "",
         "Note": "",
         "ExternalGR": true
     },
     "Delivery": {
-        "AddressLine": "CR 72 Q 37 14 SUR",
+        "AddressLine": "VIA 40 76 188",
         "CountryCode": "",
         "CountryName": "",
         "SubdivisionCode": "",
@@ -44,7 +44,7 @@
         "CityCode": "",
         "CityName": "",
         "ContactPerson": "",
-        "DeliveryDate": "2021-06-17T16:34:57",
+        "DeliveryDate": "2021-06-18T09:03:24",
         "DeliveryCompany": ""
     },
     "AdditionalDocuments": {
@@ -63,15 +63,15 @@
         },
         {
             "Name": "Fax:",
-            "Value": "4222377"
+            "Value": "4222388"
         },
         {
             "Name": "Tipo de Cambio",
-            "Value": "0"
+            "Value": "3760.45"
         },
         {
-            "Name": "AWL/BL",
-            "Value": "MAYCASA S.A. -      "
+            "Name": "AWL\/BL",
+            "Value": "EZE01092021         "
         },
         {
             "Name": "SUC",
@@ -79,43 +79,43 @@
         },
         {
             "Name": "Peso:",
-            "Value": ""
+            "Value": "82.00 KGS"
         },
         {
             "Name": "Piezas:",
-            "Value": "0"
+            "Value": "3"
         },
         {
             "Name": "Concepto o Referencia:",
-            "Value": "GJ21-32-V NPS MOSA"
+            "Value": "109061110223"
         },
         {
             "Name": "No",
-            "Value": "259207315215                  "
+            "Value": "TAMPA                         "
         },
         {
             "Name": "Valor en letras:",
-            "Value": "UN MILLON TRESCIENTOS NOVENTA Y CUATRO MIL SETECIENTOS SETENTA PESOS MCTE"
+            "Value": "UN MILLON CUATROCIENTOS NOVENTA Y UN MIL CIENTO TREINTA Y UN DOLARES CON 24\/100"
         },
         {
             "Name": "Valor mercancia:",
-            "Value": ""
+            "Value": "3760.45"
         },
         {
             "Name": "Observaciones:",
-            "Value": "NAC: 397295"
+            "Value": "108061098154 \/\/ 9815"
         },
         {
             "Name": "Vencimiento:",
-            "Value": "2021-06-17"
+            "Value": "2021-06-18"
         },
         {
             "Name": "TRM:",
-            "Value": ""
+            "Value": "3"
         },
         {
             "Name": "JefeCuenta:",
-            "Value": "VALDIVIESO SANCHEZ RAFAEL"
+            "Value": "0"
         }
     ],
     "PaymentSummary": {
@@ -125,15 +125,15 @@
     },
     "ItemInformation": [
         {
-            "ItemReference": "1003",
-            "Name": "SPRBUN 102418750/USO INSTALACIONES",
+            "ItemReference": "1001",
+            "Name": "VR.US$87.76 TRASLADO Y\/O DESCARGUE DIRECTO",
             "Quatity": 1,
-            "Price": 3178275,
+            "Price": 87.76,
             "LineAllowanceTotal": 0,
             "LineChargeTotal": 0,
             "LineTotalTaxes": 0,
-            "LineTotal": 3178275,
-            "LineExtensionAmount": 3178275,
+            "LineTotal": 0,
+            "LineExtensionAmount": 87.76,
             "MeasureUnitCode": "94",
             "FreeOFChargeIndicator": 0,
             "AdditionalReference": [],
@@ -155,15 +155,15 @@
             }
         },
         {
-            "ItemReference": "1004",
-            "Name": "SORBUN 102433646/ALMACENAMIENTO",
+            "ItemReference": "1026",
+            "Name": "VR.4*1000 LEY 863 DIC.29\/2003 S.US$87.76",
             "Quatity": 1,
-            "Price": 3774868,
+            "Price": 0.35,
             "LineAllowanceTotal": 0,
             "LineChargeTotal": 0,
             "LineTotalTaxes": 0,
-            "LineTotal": 3774868,
-            "LineExtensionAmount": 3774868,
+            "LineTotal": 0,
+            "LineExtensionAmount": 0.35,
             "MeasureUnitCode": "94",
             "FreeOFChargeIndicator": 0,
             "AdditionalReference": [],
@@ -185,165 +185,15 @@
             }
         },
         {
-            "ItemReference": "1034",
-            "Name": "NAVES 234695/VR. DOC FEE",
+            "ItemReference": "2001",
+            "Name": "VR.LIBERACION Y\/O ENDOSO",
             "Quatity": 1,
-            "Price": 242541,
+            "Price": 95,
             "LineAllowanceTotal": 0,
             "LineChargeTotal": 0,
-            "LineTotalTaxes": 0,
-            "LineTotal": 242541,
-            "LineExtensionAmount": 242541,
-            "MeasureUnitCode": "94",
-            "FreeOFChargeIndicator": 0,
-            "AdditionalReference": [],
-            "AdditionalProperty": [
-                {
-                    "Name": "Tipo de Ingreso",
-                    "Value": "TERCERO"
-                }
-            ],
-            "TaxesInformation": [],
-            "AllowanceCharge": [],
-            "InvoiceMandateInformation": {
-                "Mandate": {
-                    "IdentificationType": "",
-                    "Identification": "",
-                    "RegistrationName": "",
-                    "DV": ""
-                }
-            }
-        },
-        {
-            "ItemReference": "1037",
-            "Name": "NAVES 234700/VR. CERTIFICACION FLETE",
-            "Quatity": 1,
-            "Price": 132295,
-            "LineAllowanceTotal": 0,
-            "LineChargeTotal": 0,
-            "LineTotalTaxes": 0,
-            "LineTotal": 132295,
-            "LineExtensionAmount": 132295,
-            "MeasureUnitCode": "94",
-            "FreeOFChargeIndicator": 0,
-            "AdditionalReference": [],
-            "AdditionalProperty": [
-                {
-                    "Name": "Tipo de Ingreso",
-                    "Value": "TERCERO"
-                }
-            ],
-            "TaxesInformation": [],
-            "AllowanceCharge": [],
-            "InvoiceMandateInformation": {
-                "Mandate": {
-                    "IdentificationType": "",
-                    "Identification": "",
-                    "RegistrationName": "",
-                    "DV": ""
-                }
-            }
-        },
-        {
-            "ItemReference": "1002",
-            "Name": "IMPUESTO DECLARACION ADUANAS - IVA",
-            "Quatity": 1,
-            "Price": 90960000,
-            "LineAllowanceTotal": 0,
-            "LineChargeTotal": 0,
-            "LineTotalTaxes": 0,
-            "LineTotal": 90960000,
-            "LineExtensionAmount": 90960000,
-            "MeasureUnitCode": "94",
-            "FreeOFChargeIndicator": 0,
-            "AdditionalReference": [],
-            "AdditionalProperty": [
-                {
-                    "Name": "Tipo de Ingreso",
-                    "Value": "TERCERO"
-                }
-            ],
-            "TaxesInformation": [],
-            "AllowanceCharge": [],
-            "InvoiceMandateInformation": {
-                "Mandate": {
-                    "IdentificationType": "",
-                    "Identification": "",
-                    "RegistrationName": "",
-                    "DV": ""
-                }
-            }
-        },
-        {
-            "ItemReference": "1004",
-            "Name": "SIC 3509/ SERVICIO A LA CARGA SG",
-            "Quatity": 1,
-            "Price": 1440974,
-            "LineAllowanceTotal": 0,
-            "LineChargeTotal": 0,
-            "LineTotalTaxes": 0,
-            "LineTotal": 1440974,
-            "LineExtensionAmount": 1440974,
-            "MeasureUnitCode": "94",
-            "FreeOFChargeIndicator": 0,
-            "AdditionalReference": [],
-            "AdditionalProperty": [
-                {
-                    "Name": "Tipo de Ingreso",
-                    "Value": "TERCERO"
-                }
-            ],
-            "TaxesInformation": [],
-            "AllowanceCharge": [],
-            "InvoiceMandateInformation": {
-                "Mandate": {
-                    "IdentificationType": "",
-                    "Identification": "",
-                    "RegistrationName": "",
-                    "DV": ""
-                }
-            }
-        },
-        {
-            "ItemReference": "1030",
-            "Name": "VR.4x1000 Ley 863 dic.29/2003 S$99.728.953",
-            "Quatity": 1,
-            "Price": 398916,
-            "LineAllowanceTotal": 0,
-            "LineChargeTotal": 0,
-            "LineTotalTaxes": 0,
-            "LineTotal": 398916,
-            "LineExtensionAmount": 398916,
-            "MeasureUnitCode": "94",
-            "FreeOFChargeIndicator": 0,
-            "AdditionalReference": [],
-            "AdditionalProperty": [
-                {
-                    "Name": "Tipo de Ingreso",
-                    "Value": "TERCERO"
-                }
-            ],
-            "TaxesInformation": [],
-            "AllowanceCharge": [],
-            "InvoiceMandateInformation": {
-                "Mandate": {
-                    "IdentificationType": "",
-                    "Identification": "",
-                    "RegistrationName": "",
-                    "DV": ""
-                }
-            }
-        },
-        {
-            "ItemReference": "2003",
-            "Name": "SERV AGENCIAMIENTO INTEGRAL $478.734.886",
-            "Quatity": 1,
-            "Price": 1531952,
-            "LineAllowanceTotal": 0,
-            "LineChargeTotal": 0,
-            "LineTotalTaxes": 291071,
-            "LineTotal": 1823023,
-            "LineExtensionAmount": 1531952,
+            "LineTotalTaxes": 18.05,
+            "LineTotal": 0,
+            "LineExtensionAmount": 95,
             "MeasureUnitCode": "94",
             "FreeOFChargeIndicator": 0,
             "AdditionalReference": [],
@@ -357,9 +207,18 @@
                 {
                     "Id": "01",
                     "TaxEvidenceIndicator": false,
-                    "TaxableAmount": 1531952,
-                    "TaxAmount": 291071,
+                    "TaxableAmount": 95,
+                    "TaxAmount": 18.05,
                     "Percent": 19,
+                    "BaseUnitMeasure": "",
+                    "PerUnitAmount": ""
+                },
+                {
+                    "Id": "06",
+                    "TaxEvidenceIndicator": true,
+                    "TaxableAmount": 95,
+                    "TaxAmount": 3.8,
+                    "Percent": 4,
                     "BaseUnitMeasure": "",
                     "PerUnitAmount": ""
                 }
@@ -375,15 +234,15 @@
             }
         },
         {
-            "ItemReference": "2004",
-            "Name": "VR.GASTOS VARIOS",
+            "ItemReference": "2068",
+            "Name": "VR.AIRPORT TRANSFER",
             "Quatity": 1,
-            "Price": 85000,
+            "Price": 60,
             "LineAllowanceTotal": 0,
             "LineChargeTotal": 0,
-            "LineTotalTaxes": 16150,
-            "LineTotal": 101150,
-            "LineExtensionAmount": 85000,
+            "LineTotalTaxes": 11.4,
+            "LineTotal": 0,
+            "LineExtensionAmount": 60,
             "MeasureUnitCode": "94",
             "FreeOFChargeIndicator": 0,
             "AdditionalReference": [],
@@ -397,9 +256,18 @@
                 {
                     "Id": "01",
                     "TaxEvidenceIndicator": false,
-                    "TaxableAmount": 85000,
-                    "TaxAmount": 16150,
+                    "TaxableAmount": 60,
+                    "TaxAmount": 11.4,
                     "Percent": 19,
+                    "BaseUnitMeasure": "",
+                    "PerUnitAmount": ""
+                },
+                {
+                    "Id": "06",
+                    "TaxEvidenceIndicator": true,
+                    "TaxableAmount": 60,
+                    "TaxAmount": 2.4,
+                    "Percent": 4,
                     "BaseUnitMeasure": "",
                     "PerUnitAmount": ""
                 }
@@ -415,15 +283,15 @@
             }
         },
         {
-            "ItemReference": "2009",
-            "Name": "VR.ELAB.DECLARAC. IMPORTAC Y/O VALOR*2",
+            "ItemReference": "2039",
+            "Name": "VR.GASTOS \/ SERVICIO EN DESTINO",
             "Quatity": 1,
-            "Price": 30000,
+            "Price": 20,
             "LineAllowanceTotal": 0,
             "LineChargeTotal": 0,
-            "LineTotalTaxes": 5700,
-            "LineTotal": 35700,
-            "LineExtensionAmount": 30000,
+            "LineTotalTaxes": 3.8,
+            "LineTotal": 0,
+            "LineExtensionAmount": 20,
             "MeasureUnitCode": "94",
             "FreeOFChargeIndicator": 0,
             "AdditionalReference": [],
@@ -437,9 +305,67 @@
                 {
                     "Id": "01",
                     "TaxEvidenceIndicator": false,
-                    "TaxableAmount": 30000,
-                    "TaxAmount": 5700,
+                    "TaxableAmount": 20,
+                    "TaxAmount": 3.8,
                     "Percent": 19,
+                    "BaseUnitMeasure": "",
+                    "PerUnitAmount": ""
+                },
+                {
+                    "Id": "06",
+                    "TaxEvidenceIndicator": true,
+                    "TaxableAmount": 20,
+                    "TaxAmount": 0.8,
+                    "Percent": 4,
+                    "BaseUnitMeasure": "",
+                    "PerUnitAmount": ""
+                }
+            ],
+            "AllowanceCharge": [],
+            "InvoiceMandateInformation": {
+                "Mandate": {
+                    "IdentificationType": "",
+                    "Identification": "",
+                    "RegistrationName": "",
+                    "DV": ""
+                }
+            }
+        },
+        {
+            "ItemReference": "2006",
+            "Name": "VR.HANDLING",
+            "Quatity": 1,
+            "Price": 100,
+            "LineAllowanceTotal": 0,
+            "LineChargeTotal": 0,
+            "LineTotalTaxes": 19,
+            "LineTotal": 0,
+            "LineExtensionAmount": 100,
+            "MeasureUnitCode": "94",
+            "FreeOFChargeIndicator": 0,
+            "AdditionalReference": [],
+            "AdditionalProperty": [
+                {
+                    "Name": "Tipo de Ingreso",
+                    "Value": "PROPIO"
+                }
+            ],
+            "TaxesInformation": [
+                {
+                    "Id": "01",
+                    "TaxEvidenceIndicator": false,
+                    "TaxableAmount": 100,
+                    "TaxAmount": 19,
+                    "Percent": 19,
+                    "BaseUnitMeasure": "",
+                    "PerUnitAmount": ""
+                },
+                {
+                    "Id": "06",
+                    "TaxEvidenceIndicator": true,
+                    "TaxableAmount": 100,
+                    "TaxAmount": 4,
+                    "Percent": 4,
                     "BaseUnitMeasure": "",
                     "PerUnitAmount": ""
                 }
@@ -459,39 +385,52 @@
         {
             "Id": "01",
             "TaxEvidenceIndicator": false,
-            "TaxableAmount": 1646952,
-            "TaxAmount": 312921,
+            "TaxableAmount": 275,
+            "TaxAmount": 52.25,
             "Percent": 19,
+            "BaseUnitMeasure": "",
+            "PerUnitAmount": ""
+        },
+        {
+            "Id": "05",
+            "TaxEvidenceIndicator": true,
+            "TaxableAmount": 275,
+            "TaxAmount": 7.83,
+            "Percent": 15,
+            "BaseUnitMeasure": "",
+            "PerUnitAmount": ""
+        },
+        {
+            "Id": "06",
+            "TaxEvidenceIndicator": true,
+            "TaxableAmount": 275,
+            "TaxAmount": 11,
+            "Percent": 4,
             "BaseUnitMeasure": "",
             "PerUnitAmount": ""
         }
     ],
     "InvoiceAllowanceCharge": [],
     "InvoiceTotalOwn": {
-        "LineExtensionAmount": 1646952,
-        "TaxExclusiveAmount": 1646952,
-        "TaxAmount": 603992,
-        "PayableAmount": 2250944
+        "LineExtensionAmount": 275,
+        "TaxExclusiveAmount": 275,
+        "TaxAmount": 52.25,
+        "PayableAmount": 327.25
     },
     "InvoiceTotalOthers": {
-        "LineExtensionAmount": 100127869,
+        "LineExtensionAmount": 88.11,
         "TaxExclusiveAmount": 0,
         "TaxAmount": 0,
-        "PayableAmount": 100127869
+        "PayableAmount": 88.11
     },
     "InvoiceTotal": {
-        "LineExtensionAmount": 101774821,
-        "TaxExclusiveAmount": 1646952,
-        "TaxInclusiveAmount": 102378813,
+        "LineExtensionAmount": 363.11,
+        "TaxExclusiveAmount": 275,
+        "TaxInclusiveAmount": 415.36,
         "AllowanceTotalAmount": 0,
         "ChargeTotalAmount": 0,
-        "PrePaidAmount": 100984043,
-        "PayableAmount": 1394770
+        "PrePaidAmount": 0,
+        "PayableAmount": 415.36
     },
-    "Documents": [
-        {
-            "Name": "FUNZ3509",
-            "ID": "f093c823-82ed-4d3f-9818-1ce25d91380e"
-        }
-    ]
+    "Documents": []
 }
