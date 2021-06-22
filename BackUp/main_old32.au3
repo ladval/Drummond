@@ -19,15 +19,12 @@ Local $sSQL_InvoiceNumber = "BQA102372"
 Local $sCosteoDrummondQuery = "SELECT DISTINCT * FROM [Repecev2005].[dbo].[VCosteoDrummond_fact] WHERE FACTURASERVICIOS LIKE '" & $sSQL_InvoiceNumber & "'"
 Local $sJsonFactQuery = "SELECT JsonFact FROM [BotAbc].[dbo].[tfact_ApiProcesos] where InvoiceNumber = '" & $sSQL_InvoiceNumber & "'"
 Local $aTRK_Data = _ModuloSQL_SQL_SELECT($sCosteoDrummondQuery)
-Local $aIDDIM_Data = _2dArray_UniqueElements($aTRK_Data, 0) ;Se define la columna 0 como criterio de elementos repetidos, dado que campo IDDIM es único para cálculo de valor CIF
-_ArrayDisplay($aIDDIM_Data, '$aIDDIM_Data')
-
-
 Local $aAPI_Data = _ModuloSQL_SQL_SELECT($sJsonFactQuery)
 Local $sJsonFact = $aAPI_Data[1][0]
 Local $sJsonFile_InvoiceData = @ScriptDir & '\data\' & $sSQL_InvoiceNumber & '.json'
 
-Func _2dArray_UniqueElements($aArray, $iCol)
+
+Func _2dArray_UniqueElements($aArray,$iCol)
 	Local $aArrayUnique = _ArrayUnique($aArray, $iCol, 1, Default, 0) ;Configuración que permite seleccionar únicamente la información no repetida de la tabla sin header ni COUNT
 	Local $iUniqueElements = (UBound($aArrayUnique) - 1)
 	Local $aUniqueElements[0][UBound($aArray, 2)]
@@ -47,6 +44,7 @@ EndFunc   ;==>_2dArray_UniqueElements
 
 
 Exit
+_ArrayDisplay($aTRK_DataUnique, '$aTRK_Data')
 
 _SaveDataToFile($sJsonFile_InvoiceData, $sJsonFact)
 Local $sJsonInvoiceData = _ReadDataFromFile($sJsonFile_InvoiceData)

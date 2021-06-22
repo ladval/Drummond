@@ -20,7 +20,7 @@ Local $sCosteoDrummondQuery = "SELECT DISTINCT * FROM [Repecev2005].[dbo].[VCost
 Local $sJsonFactQuery = "SELECT JsonFact FROM [BotAbc].[dbo].[tfact_ApiProcesos] where InvoiceNumber = '" & $sSQL_InvoiceNumber & "'"
 Local $aTRK_Data = _ModuloSQL_SQL_SELECT($sCosteoDrummondQuery)
 Local $aIDDIM_Data = _2dArray_UniqueElements($aTRK_Data, 0) ;Se define la columna 0 como criterio de elementos repetidos, dado que campo IDDIM es único para cálculo de valor CIF
-_ArrayDisplay($aIDDIM_Data, '$aIDDIM_Data')
+_ArrayDisplay($aIDDIM_Data,'$aIDDIM_Data')
 
 
 Local $aAPI_Data = _ModuloSQL_SQL_SELECT($sJsonFactQuery)
@@ -47,6 +47,7 @@ EndFunc   ;==>_2dArray_UniqueElements
 
 
 Exit
+_ArrayDisplay($aTRK_DataUnique, '$aTRK_Data')
 
 _SaveDataToFile($sJsonFile_InvoiceData, $sJsonFact)
 Local $sJsonInvoiceData = _ReadDataFromFile($sJsonFile_InvoiceData)
