@@ -24,7 +24,7 @@ If UBound($aTRK_Data) < 2 Then
 	Exit
 EndIf
 _JsonFactData($sSQL_InvoiceNumber)
-_JsonCodedData()
+
 Exit
 
 Func _JsonFactData($sSQL_InvoiceNumber)
@@ -46,7 +46,6 @@ Local $sInvoiceDate = $aTRK_Data[1][31]
 Local $sCIFUS = _CIF($aIDDIM_Data, 'USD')
 Local $sTCRM = Number($aTRK_Data[1][16])
 Local $sCIFCOP = _CIF($aIDDIM_Data, 'COP')
-
 
 Func _JsonCodedData()
 	Local $sManejoNaviero = '1034'
@@ -102,7 +101,7 @@ Func _JsonCodedData()
 	Local $sElaboracionDeclaracionesValor = '2042'
 	Local $sDescargueDirecto = '2007'
 	Local $sVistoBueno = '2045'
-	Local $aJsonReportData[53]
+	Local $aJsonReportata[53]
 	$aJsonReportData[0] = $sManejoNaviero
 	$aJsonReportData[1] = $sUsoInstalaciones
 	$aJsonReportData[2] = $sBodegaje
@@ -148,19 +147,17 @@ Func _JsonCodedData()
 	$aJsonReportData[42] = $sAdicional4
 	$aJsonReportData[43] = $sServicioExtraordinario
 	$aJsonReportData[44] = $sVr4xmil
-	$aJsonReportData[45] = $sServicioAduana
-	$aJsonReportData[46] = $sReconocimientoMcia
-	$aJsonReportData[47] = $sElaboracionRegistrosImp
-	$aJsonReportData[48] = $sElaboracionDeclaracionesImportacion
-	$aJsonReportData[49] = $sElaboracionDeclaracionesValor
-	$aJsonReportData[50] = $sDescargueDirecto
-	$aJsonReportData[51] = $sVistoBueno
-	_ArrayDisplay($aJsonReportData, '$aJsonReportData')
+	$aJsonReportData[45] = $sSubtotal
+	$aJsonReportData[46] = $sServicioAduana
+	$aJsonReportData[47] = $sReconocimientoMcia
+	$aJsonReportData[48] = $sElaboracionRegistrosImp
+	$aJsonReportData[49] = $sElaboracionDeclaracionesImportacion
+	$aJsonReportData[50] = $sElaboracionDeclaracionesValor
+	$aJsonReportData[51] = $sDescargueDirecto
+	$aJsonReportData[52] = $sVistoBueno
+	_ArrayDisplay($aJsonReportData,'$aJsonReportData')
 EndFunc   ;==>_JsonCodedData
 
-
-
-Local $sSubtotal ;Subtotal ubicado en zona de información de items
 
 
 Local $sSubtotal

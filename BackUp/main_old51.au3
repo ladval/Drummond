@@ -24,7 +24,7 @@ If UBound($aTRK_Data) < 2 Then
 	Exit
 EndIf
 _JsonFactData($sSQL_InvoiceNumber)
-_JsonCodedData()
+
 Exit
 
 Func _JsonFactData($sSQL_InvoiceNumber)
@@ -47,120 +47,116 @@ Local $sCIFUS = _CIF($aIDDIM_Data, 'USD')
 Local $sTCRM = Number($aTRK_Data[1][16])
 Local $sCIFCOP = _CIF($aIDDIM_Data, 'COP')
 
-
 Func _JsonCodedData()
-	Local $sManejoNaviero = '1034'
-	Local $sUsoInstalaciones = '1003'
-	Local $sBodegaje = '1004'
-	Local $sVuce = '1016'
-	Local $sVaciado = '1008'
-	Local $sInspeccionDian = '1042'
-	Local $sDepositoContenedor = '1010'
-	Local $sLiberacionManejoGuia = '1005'
-	Local $sDemorasContenedor = '1011'
-	Local $sMovilizacionInspeccion = '1043'
-	Local $sArancel = '1001'
-	Local $sIVA = '1002'
-	Local $sMaquinaInterna = '1061'
-	Local $sVistosBuenos = '1023'
-	Local $sCargueDescargue = '1025'
-	Local $sPorteo = '1024'
-	Local $sInspeccionReconocimiento = '1046'
-	Local $sTraslado = '1018'
-	Local $sStacker = '1045'
-	Local $sDanos = '1050'
-	Local $sSuciedad = '1026'
-	Local $sEmisionBL = '1028'
-	Local $sAperturaCierre = '1015'
-	Local $sCertificados = '1020'
-	Local $sBasculas = '1029'
-	Local $sPapeleria = '1038'
-	Local $sCambioModalidad = '1048'
-	Local $sHoraAdicional = '1052'
-	Local $sCargoFijo = '1054'
-	Local $sManejoDocumentos = '1006'
-	Local $sCamaAltaBaja = '1044'
-	Local $sServicioCarpado = '1060'
-	Local $sServicioConsolidacion = '1007'
-	Local $sComodatos = '1039'
-	Local $sTrabajosVariosHorasHombres = '1049'
-	Local $sSellosContenedor = '1051'
-	Local $sEnvio = '1031'
-	Local $sDismounting = '1012'
-	Local $sTransporte = '1027'
-	Local $sReempaque = '1022'
-	Local $sAdicional2 = '1032'
-	Local $sAdicional3 = '1041'
-	Local $sAdicional4 = '1009'
-	Local $sServicioExtraordinario = '1014'
-	Local $sVr4xmil = '1030'
-	Local $sSubtotal = 0
-	Local $sServicioAduana = '2003'
-	Local $sReconocimientoMcia = '2052'
-	Local $sElaboracionRegistrosImp = '2005'
-	Local $sElaboracionDeclaracionesImportacion = '2009'
-	Local $sElaboracionDeclaracionesValor = '2042'
-	Local $sDescargueDirecto = '2007'
-	Local $sVistoBueno = '2045'
-	Local $aJsonReportData[53]
-	$aJsonReportData[0] = $sManejoNaviero
-	$aJsonReportData[1] = $sUsoInstalaciones
-	$aJsonReportData[2] = $sBodegaje
-	$aJsonReportData[3] = $sVuce
-	$aJsonReportData[4] = $sVaciado
-	$aJsonReportData[5] = $sInspeccionDian
-	$aJsonReportData[6] = $sDepositoContenedor
-	$aJsonReportData[7] = $sLiberacionManejoGuia
-	$aJsonReportData[8] = $sDemorasContenedor
-	$aJsonReportData[9] = $sMovilizacionInspeccion
-	$aJsonReportData[10] = $sArancel
-	$aJsonReportData[11] = $sIVA
-	$aJsonReportData[12] = $sMaquinaInterna
-	$aJsonReportData[13] = $sVistosBuenos
-	$aJsonReportData[14] = $sCargueDescargue
-	$aJsonReportData[15] = $sPorteo
-	$aJsonReportData[16] = $sInspeccionReconocimiento
-	$aJsonReportData[17] = $sTraslado
-	$aJsonReportData[18] = $sStacker
-	$aJsonReportData[19] = $sDanos
-	$aJsonReportData[20] = $sSuciedad
-	$aJsonReportData[21] = $sEmisionBL
-	$aJsonReportData[22] = $sAperturaCierre
-	$aJsonReportData[23] = $sCertificados
-	$aJsonReportData[24] = $sBasculas
-	$aJsonReportData[25] = $sPapeleria
-	$aJsonReportData[26] = $sCambioModalidad
-	$aJsonReportData[27] = $sHoraAdicional
-	$aJsonReportData[28] = $sCargoFijo
-	$aJsonReportData[29] = $sManejoDocumentos
-	$aJsonReportData[30] = $sCamaAltaBaja
-	$aJsonReportData[31] = $sServicioCarpado
-	$aJsonReportData[32] = $sServicioConsolidacion
-	$aJsonReportData[33] = $sComodatos
-	$aJsonReportData[34] = $sTrabajosVariosHorasHombres
-	$aJsonReportData[35] = $sSellosContenedor
-	$aJsonReportData[36] = $sEnvio
-	$aJsonReportData[37] = $sDismounting
-	$aJsonReportData[38] = $sTransporte
-	$aJsonReportData[39] = $sReempaque
-	$aJsonReportData[40] = $sAdicional2
-	$aJsonReportData[41] = $sAdicional3
-	$aJsonReportData[42] = $sAdicional4
-	$aJsonReportData[43] = $sServicioExtraordinario
-	$aJsonReportData[44] = $sVr4xmil
-	$aJsonReportData[45] = $sServicioAduana
-	$aJsonReportData[46] = $sReconocimientoMcia
-	$aJsonReportData[47] = $sElaboracionRegistrosImp
-	$aJsonReportData[48] = $sElaboracionDeclaracionesImportacion
-	$aJsonReportData[49] = $sElaboracionDeclaracionesValor
-	$aJsonReportData[50] = $sDescargueDirecto
-	$aJsonReportData[51] = $sVistoBueno
-	_ArrayDisplay($aJsonReportData, '$aJsonReportData')
-EndFunc   ;==>_JsonCodedData
+Local $sManejoNaviero = '1034'
+Local $sUsoInstalaciones = '1003'
+Local $sBodegaje = '1004'
+Local $sVuce = '1016'
+Local $sVaciado = '1008'
+Local $sInspeccionDian = '1042'
+Local $sDepositoContenedor = '1010'
+Local $sLiberacionManejoGuia = '1005'
+Local $sDemorasContenedor = '1011'
+Local $sMovilizacionInspeccion = '1043'
+Local $sArancel = '1001'
+Local $sIVA = '1002'
+Local $sMaquinaInterna = '1061'
+Local $sVistosBuenos = '1023'
+Local $sCargueDescargue = '1025'
+Local $sPorteo = '1024'
+Local $sInspeccionReconocimiento = '1046'
+Local $sTraslado = '1018'
+Local $sStacker = '1045'
+Local $sDanos = '1050'
+Local $sSuciedad = '1026'
+Local $sEmisionBL = '1028'
+Local $sAperturaCierre = '1015'
+Local $sCertificados = '1020'
+Local $sBasculas = '1029'
+Local $sPapeleria = '1038'
+Local $sCambioModalidad = '1048'
+Local $sHoraAdicional = '1052'
+Local $sCargoFijo = '1054'
+Local $sManejoDocumentos = '1006'
+Local $sCamaAltaBaja = '1044'
+Local $sServicioCarpado = '1060'
+Local $sServicioConsolidacion = '1007'
+Local $sComodatos = '1039'
+Local $sTrabajosVariosHorasHombres = '1049'
+Local $sSellosContenedor = '1051'
+Local $sEnvio = '1031'
+Local $sDismounting = '1012'
+Local $sTransporte = '1027'
+Local $sReempaque = '1022'
+Local $sAdicional2 = '1032'
+Local $sAdicional3 = '1041'
+Local $sAdicional4 = '1009'
+Local $sServicioExtraordinario = '1014'
+Local $sVr4xmil = '1030'
+Local $sSubtotal = 0
+Local $sServicioAduana = '2003'
+Local $sReconocimientoMcia = '2052'
+Local $sElaboracionRegistrosImp = '2005'
+Local $sElaboracionDeclaracionesImportacion = '2009'
+Local $sElaboracionDeclaracionesValor = '2042'
+Local $sDescargueDirecto = '2007'
+Local $sVistoBueno = '2045'
+Local $aJsonReportata[53]
+$aJsonReportData[0] = $sManejoNaviero
+$aJsonReportData[1] = $sUsoInstalaciones
+$aJsonReportData[2] = $sBodegaje
+$aJsonReportData[3] = $sVuce
+$aJsonReportData[4] = $sVaciado
+$aJsonReportData[5] = $sInspeccionDian
+$aJsonReportData[6] = $sDepositoContenedor
+$aJsonReportData[7] = $sLiberacionManejoGuia
+$aJsonReportData[8] = $sDemorasContenedor
+$aJsonReportData[9] = $sMovilizacionInspeccion
+$aJsonReportData[10] = $sArancel
+$aJsonReportData[11] = $sIVA
+$aJsonReportData[12] = $sMaquinaInterna
+$aJsonReportData[13] = $sVistosBuenos
+$aJsonReportData[14] = $sCargueDescargue
+$aJsonReportData[15] = $sPorteo
+$aJsonReportData[16] = $sInspeccionReconocimiento
+$aJsonReportData[17] = $sTraslado
+$aJsonReportData[18] = $sStacker
+$aJsonReportData[19] = $sDanos
+$aJsonReportData[20] = $sSuciedad
+$aJsonReportData[21] = $sEmisionBL
+$aJsonReportData[22] = $sAperturaCierre
+$aJsonReportData[23] = $sCertificados
+$aJsonReportData[24] = $sBasculas
+$aJsonReportData[25] = $sPapeleria
+$aJsonReportData[26] = $sCambioModalidad
+$aJsonReportData[27] = $sHoraAdicional
+$aJsonReportData[28] = $sCargoFijo
+$aJsonReportData[29] = $sManejoDocumentos
+$aJsonReportData[30] = $sCamaAltaBaja
+$aJsonReportData[31] = $sServicioCarpado
+$aJsonReportData[32] = $sServicioConsolidacion
+$aJsonReportData[33] = $sComodatos
+$aJsonReportData[34] = $sTrabajosVariosHorasHombres
+$aJsonReportData[35] = $sSellosContenedor
+$aJsonReportData[36] = $sEnvio
+$aJsonReportData[37] = $sDismounting
+$aJsonReportData[38] = $sTransporte
+$aJsonReportData[39] = $sReempaque
+$aJsonReportData[40] = $sAdicional2
+$aJsonReportData[41] = $sAdicional3
+$aJsonReportData[42] = $sAdicional4
+$aJsonReportData[43] = $sServicioExtraordinario
+$aJsonReportData[44] = $sVr4xmil
+$aJsonReportData[45] = $sSubtotal
+$aJsonReportData[46] = $sServicioAduana
+$aJsonReportData[47] = $sReconocimientoMcia
+$aJsonReportData[48] = $sElaboracionRegistrosImp
+$aJsonReportData[49] = $sElaboracionDeclaracionesImportacion
+$aJsonReportData[50] = $sElaboracionDeclaracionesValor
+$aJsonReportData[51] = $sDescargueDirecto
+$aJsonReportData[52] = $sVistoBueno
+EndFunc
 
-
-
-Local $sSubtotal ;Subtotal ubicado en zona de información de items
 
 
 Local $sSubtotal
