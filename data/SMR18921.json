@@ -1,1 +1,495 @@
-{"CustomerInformation":{"IdentificationType":31,"Identification":"800021308","DV":"5","RegistrationName":"DRUMMOND LTD","CountryCode":"CO","CountryName":"COLOMBIA","SubdivisionCode":"47","SubdivisionName":"MAGDALENA","CityCode":"47189","CityName":"CI\u00c9NAGA","AddressLine":"KILOMETRO 10 VIA CIENAGA","Telephone":"4320555","Email":"facturacion@drummondltd.com,facturacion-noreply@abcrepecev.com","CustomerCode":"","AdditionalAccountID":"1","TaxLevelCodeListName":"48","PostalZone":"478001","TaxSchemeCode":"01","TaxSchemeName":"IVA","FiscalResponsabilities":"O-13","PartecipationPercent":"","AdditionalCustomer":[]},"InvoiceGeneralInformation":{"InvoiceAuthorizationNumber":"18763002723798","PreinvoiceNumber":18921,"InvoiceNumber":"18921","DaysOff":"8","Currency":"COP","ExchangeRate":0,"ExchangeRateDate":"","SalesPerson":"","Note":"","ExternalGR":true},"Delivery":{"AddressLine":"KILOMETRO 10 VIA CIENAGA","CountryCode":"","CountryName":"","SubdivisionCode":"","SubdivisionName":"","CityCode":"","CityName":"","ContactPerson":"","DeliveryDate":"2021-06-18T14:04:55","DeliveryCompany":""},"AdditionalDocuments":{"OrderReference":"","OrderReferenceIssueDate":"","DespatchDocumentReference":"","DespatchDocumentIssueDate":"","ReceiptDocumentReference":"","ReceiptDocumentIssueDate":"","AdditionalDocument":[]},"AdditionalProperty":[{"Name":"Codigo CIIU","Value":"5229"},{"Name":"Fax:","Value":"4222377"},{"Name":"Tipo de Cambio","Value":"0"},{"Name":"AWL\/BL","Value":"PERRY SUPPLY        "},{"Name":"SUC","Value":""},{"Name":"Peso:","Value":""},{"Name":"Piezas:","Value":"0"},{"Name":"Concepto o Referencia:","Value":"S2105-067A"},{"Name":"No","Value":"130810429214                  "},{"Name":"Valor en letras:","Value":"DOS MILLONES CINCUENTA Y UN MIL SETECIENTOS SETENTA Y SEIS PESOS MCTE"},{"Name":"Valor mercancia:","Value":""},{"Name":"Observaciones:","Value":"CONTENEDOR TCNU6978662\/ BL SMLU6593971A?NAC: 401225"},{"Name":"Vencimiento:","Value":"2021-06-26"},{"Name":"TRM:","Value":"SEABOARD"},{"Name":"JefeCuenta:","Value":"PEDROZA HERNANDEZ JOHNNY"}],"PaymentSummary":{"PaymentType":1,"PaymentMeans":"42","PaymentNote":""},"ItemInformation":[{"ItemReference":"1003","Name":"SPSM F-800453852 USO CONTENEDOR","Quatity":1,"Price":180460,"LineAllowanceTotal":0,"LineChargeTotal":0,"LineTotalTaxes":0,"LineTotal":180460,"LineExtensionAmount":180460,"MeasureUnitCode":"94","FreeOFChargeIndicator":0,"AdditionalReference":[],"AdditionalProperty":[{"Name":"Tipo de Ingreso","Value":"TERCERO"}],"TaxesInformation":[],"AllowanceCharge":[],"InvoiceMandateInformation":{"Mandate":{"IdentificationType":"","Identification":"","RegistrationName":"","DV":""}}},{"ItemReference":"1025","Name":"SMITCO F-332552 CARGUE \/ DESCARGUE","Quatity":1,"Price":129931,"LineAllowanceTotal":0,"LineChargeTotal":0,"LineTotalTaxes":0,"LineTotal":129931,"LineExtensionAmount":129931,"MeasureUnitCode":"94","FreeOFChargeIndicator":0,"AdditionalReference":[],"AdditionalProperty":[{"Name":"Tipo de Ingreso","Value":"TERCERO"}],"TaxesInformation":[],"AllowanceCharge":[],"InvoiceMandateInformation":{"Mandate":{"IdentificationType":"","Identification":"","RegistrationName":"","DV":""}}},{"ItemReference":"1046","Name":"SMITCO F-332529 INSPECCION  RECONOCIMIENTO","Quatity":1,"Price":365741,"LineAllowanceTotal":0,"LineChargeTotal":0,"LineTotalTaxes":0,"LineTotal":365741,"LineExtensionAmount":365741,"MeasureUnitCode":"94","FreeOFChargeIndicator":0,"AdditionalReference":[],"AdditionalProperty":[{"Name":"Tipo de Ingreso","Value":"TERCERO"}],"TaxesInformation":[],"AllowanceCharge":[],"InvoiceMandateInformation":{"Mandate":{"IdentificationType":"","Identification":"","RegistrationName":"","DV":""}}},{"ItemReference":"1043","Name":"SMITCO F-332529 MOVILIZACION","Quatity":1,"Price":438889,"LineAllowanceTotal":0,"LineChargeTotal":0,"LineTotalTaxes":0,"LineTotal":438889,"LineExtensionAmount":438889,"MeasureUnitCode":"94","FreeOFChargeIndicator":0,"AdditionalReference":[],"AdditionalProperty":[{"Name":"Tipo de Ingreso","Value":"TERCERO"}],"TaxesInformation":[],"AllowanceCharge":[],"InvoiceMandateInformation":{"Mandate":{"IdentificationType":"","Identification":"","RegistrationName":"","DV":""}}},{"ItemReference":"1030","Name":"VR.4x1000 Ley 863 dic.29\/2003 S$1.115.021","Quatity":1,"Price":4460,"LineAllowanceTotal":0,"LineChargeTotal":0,"LineTotalTaxes":0,"LineTotal":4460,"LineExtensionAmount":4460,"MeasureUnitCode":"94","FreeOFChargeIndicator":0,"AdditionalReference":[],"AdditionalProperty":[{"Name":"Tipo de Ingreso","Value":"TERCERO"}],"TaxesInformation":[],"AllowanceCharge":[],"InvoiceMandateInformation":{"Mandate":{"IdentificationType":"","Identification":"","RegistrationName":"","DV":""}}},{"ItemReference":"2003","Name":"SERV AGENCIAMIENTO INTEGRAL $","Quatity":1,"Price":309902,"LineAllowanceTotal":0,"LineChargeTotal":0,"LineTotalTaxes":58881,"LineTotal":368783,"LineExtensionAmount":309902,"MeasureUnitCode":"94","FreeOFChargeIndicator":0,"AdditionalReference":[],"AdditionalProperty":[{"Name":"Tipo de Ingreso","Value":"PROPIO"}],"TaxesInformation":[{"Id":"01","TaxEvidenceIndicator":false,"TaxableAmount":309902,"TaxAmount":58881,"Percent":19,"BaseUnitMeasure":"","PerUnitAmount":""}],"AllowanceCharge":[],"InvoiceMandateInformation":{"Mandate":{"IdentificationType":"","Identification":"","RegistrationName":"","DV":""}}},{"ItemReference":"2009","Name":"VR.ELAB.DECLARAC. IMPORTAC X 53","Quatity":1,"Price":212106,"LineAllowanceTotal":0,"LineChargeTotal":0,"LineTotalTaxes":40300,"LineTotal":252406,"LineExtensionAmount":212106,"MeasureUnitCode":"94","FreeOFChargeIndicator":0,"AdditionalReference":[],"AdditionalProperty":[{"Name":"Tipo de Ingreso","Value":"PROPIO"}],"TaxesInformation":[{"Id":"01","TaxEvidenceIndicator":false,"TaxableAmount":212106,"TaxAmount":40300,"Percent":19,"BaseUnitMeasure":"","PerUnitAmount":""}],"AllowanceCharge":[],"InvoiceMandateInformation":{"Mandate":{"IdentificationType":"","Identification":"","RegistrationName":"","DV":""}}},{"ItemReference":"2042","Name":"VR.ELAB.DECL VALOR X 53","Quatity":1,"Price":212106,"LineAllowanceTotal":0,"LineChargeTotal":0,"LineTotalTaxes":40300,"LineTotal":252406,"LineExtensionAmount":212106,"MeasureUnitCode":"94","FreeOFChargeIndicator":0,"AdditionalReference":[],"AdditionalProperty":[{"Name":"Tipo de Ingreso","Value":"PROPIO"}],"TaxesInformation":[{"Id":"01","TaxEvidenceIndicator":false,"TaxableAmount":212106,"TaxAmount":40300,"Percent":19,"BaseUnitMeasure":"","PerUnitAmount":""}],"AllowanceCharge":[],"InvoiceMandateInformation":{"Mandate":{"IdentificationType":"","Identification":"","RegistrationName":"","DV":""}}},{"ItemReference":"2052","Name":"VR.RECONOCIMIENTO X 2H","Quatity":1,"Price":75522,"LineAllowanceTotal":0,"LineChargeTotal":0,"LineTotalTaxes":14349,"LineTotal":89871,"LineExtensionAmount":75522,"MeasureUnitCode":"94","FreeOFChargeIndicator":0,"AdditionalReference":[],"AdditionalProperty":[{"Name":"Tipo de Ingreso","Value":"PROPIO"}],"TaxesInformation":[{"Id":"01","TaxEvidenceIndicator":false,"TaxableAmount":75522,"TaxAmount":14349,"Percent":19,"BaseUnitMeasure":"","PerUnitAmount":""}],"AllowanceCharge":[],"InvoiceMandateInformation":{"Mandate":{"IdentificationType":"","Identification":"","RegistrationName":"","DV":""}}}],"InvoiceTaxTotal":[{"Id":"01","TaxEvidenceIndicator":false,"TaxableAmount":809636,"TaxAmount":153830,"Percent":19,"BaseUnitMeasure":"","PerUnitAmount":""},{"Id":"05","TaxEvidenceIndicator":true,"TaxableAmount":809636,"TaxAmount":23075,"Percent":15,"BaseUnitMeasure":"","PerUnitAmount":""},{"Id":"07","TaxEvidenceIndicator":true,"TaxableAmount":809636,"TaxAmount":8096,"Percent":1,"BaseUnitMeasure":"","PerUnitAmount":""}],"InvoiceAllowanceCharge":[],"InvoiceTotalOwn":{"LineExtensionAmount":809636,"TaxExclusiveAmount":809636,"TaxAmount":153830,"PayableAmount":963466},"InvoiceTotalOthers":{"LineExtensionAmount":1119481,"TaxExclusiveAmount":0,"TaxAmount":0,"PayableAmount":1119481},"InvoiceTotal":{"LineExtensionAmount":1929117,"TaxExclusiveAmount":809636,"TaxInclusiveAmount":2082947,"AllowanceTotalAmount":0,"ChargeTotalAmount":0,"PrePaidAmount":0,"PayableAmount":2082947},"Documents": [{"Name": "Procesos_Drummond_SMR18921_401225.xlsx","ID": "25027349-cf1f-4ae3-95fa-3cc66fb8acc4"}]}
+{
+    "CustomerInformation": {
+        "IdentificationType": 31,
+        "Identification": "800021308",
+        "DV": "5",
+        "RegistrationName": "DRUMMOND LTD",
+        "CountryCode": "CO",
+        "CountryName": "COLOMBIA",
+        "SubdivisionCode": "47",
+        "SubdivisionName": "MAGDALENA",
+        "CityCode": "47189",
+        "CityName": "CI\u00c9NAGA",
+        "AddressLine": "KILOMETRO 10 VIA CIENAGA",
+        "Telephone": "4320555",
+        "Email": "facturacion@drummondltd.com,facturacion-noreply@abcrepecev.com",
+        "CustomerCode": "",
+        "AdditionalAccountID": "1",
+        "TaxLevelCodeListName": "48",
+        "PostalZone": "478001",
+        "TaxSchemeCode": "01",
+        "TaxSchemeName": "IVA",
+        "FiscalResponsabilities": "O-13",
+        "PartecipationPercent": "",
+        "AdditionalCustomer": []
+    },
+    "InvoiceGeneralInformation": {
+        "InvoiceAuthorizationNumber": "18763002723798",
+        "PreinvoiceNumber": 18921,
+        "InvoiceNumber": "18921",
+        "DaysOff": "8",
+        "Currency": "COP",
+        "ExchangeRate": 0,
+        "ExchangeRateDate": "",
+        "SalesPerson": "",
+        "Note": "",
+        "ExternalGR": true
+    },
+    "Delivery": {
+        "AddressLine": "KILOMETRO 10 VIA CIENAGA",
+        "CountryCode": "",
+        "CountryName": "",
+        "SubdivisionCode": "",
+        "SubdivisionName": "",
+        "CityCode": "",
+        "CityName": "",
+        "ContactPerson": "",
+        "DeliveryDate": "2021-06-18T14:04:55",
+        "DeliveryCompany": ""
+    },
+    "AdditionalDocuments": {
+        "OrderReference": "",
+        "OrderReferenceIssueDate": "",
+        "DespatchDocumentReference": "",
+        "DespatchDocumentIssueDate": "",
+        "ReceiptDocumentReference": "",
+        "ReceiptDocumentIssueDate": "",
+        "AdditionalDocument": []
+    },
+    "AdditionalProperty": [
+        {
+            "Name": "Codigo CIIU",
+            "Value": "5229"
+        },
+        {
+            "Name": "Fax:",
+            "Value": "4222377"
+        },
+        {
+            "Name": "Tipo de Cambio",
+            "Value": "0"
+        },
+        {
+            "Name": "AWL\/BL",
+            "Value": "PERRY SUPPLY        "
+        },
+        {
+            "Name": "SUC",
+            "Value": ""
+        },
+        {
+            "Name": "Peso:",
+            "Value": ""
+        },
+        {
+            "Name": "Piezas:",
+            "Value": "0"
+        },
+        {
+            "Name": "Concepto o Referencia:",
+            "Value": "S2105-067A"
+        },
+        {
+            "Name": "No",
+            "Value": "130810429214                  "
+        },
+        {
+            "Name": "Valor en letras:",
+            "Value": "DOS MILLONES CINCUENTA Y UN MIL SETECIENTOS SETENTA Y SEIS PESOS MCTE"
+        },
+        {
+            "Name": "Valor mercancia:",
+            "Value": ""
+        },
+        {
+            "Name": "Observaciones:",
+            "Value": "CONTENEDOR TCNU6978662\/ BL SMLU6593971A?NAC: 401225"
+        },
+        {
+            "Name": "Vencimiento:",
+            "Value": "2021-06-26"
+        },
+        {
+            "Name": "TRM:",
+            "Value": "SEABOARD"
+        },
+        {
+            "Name": "JefeCuenta:",
+            "Value": "PEDROZA HERNANDEZ JOHNNY"
+        }
+    ],
+    "PaymentSummary": {
+        "PaymentType": 1,
+        "PaymentMeans": "42",
+        "PaymentNote": ""
+    },
+    "ItemInformation": [
+        {
+            "ItemReference": "1003",
+            "Name": "SPSM F-800453852 USO CONTENEDOR",
+            "Quatity": 1,
+            "Price": 180460,
+            "LineAllowanceTotal": 0,
+            "LineChargeTotal": 0,
+            "LineTotalTaxes": 0,
+            "LineTotal": 180460,
+            "LineExtensionAmount": 180460,
+            "MeasureUnitCode": "94",
+            "FreeOFChargeIndicator": 0,
+            "AdditionalReference": [],
+            "AdditionalProperty": [
+                {
+                    "Name": "Tipo de Ingreso",
+                    "Value": "TERCERO"
+                }
+            ],
+            "TaxesInformation": [],
+            "AllowanceCharge": [],
+            "InvoiceMandateInformation": {
+                "Mandate": {
+                    "IdentificationType": "",
+                    "Identification": "",
+                    "RegistrationName": "",
+                    "DV": ""
+                }
+            }
+        },
+        {
+            "ItemReference": "1025",
+            "Name": "SMITCO F-332552 CARGUE \/ DESCARGUE",
+            "Quatity": 1,
+            "Price": 129931,
+            "LineAllowanceTotal": 0,
+            "LineChargeTotal": 0,
+            "LineTotalTaxes": 0,
+            "LineTotal": 129931,
+            "LineExtensionAmount": 129931,
+            "MeasureUnitCode": "94",
+            "FreeOFChargeIndicator": 0,
+            "AdditionalReference": [],
+            "AdditionalProperty": [
+                {
+                    "Name": "Tipo de Ingreso",
+                    "Value": "TERCERO"
+                }
+            ],
+            "TaxesInformation": [],
+            "AllowanceCharge": [],
+            "InvoiceMandateInformation": {
+                "Mandate": {
+                    "IdentificationType": "",
+                    "Identification": "",
+                    "RegistrationName": "",
+                    "DV": ""
+                }
+            }
+        },
+        {
+            "ItemReference": "1046",
+            "Name": "SMITCO F-332529 INSPECCION  RECONOCIMIENTO",
+            "Quatity": 1,
+            "Price": 365741,
+            "LineAllowanceTotal": 0,
+            "LineChargeTotal": 0,
+            "LineTotalTaxes": 0,
+            "LineTotal": 365741,
+            "LineExtensionAmount": 365741,
+            "MeasureUnitCode": "94",
+            "FreeOFChargeIndicator": 0,
+            "AdditionalReference": [],
+            "AdditionalProperty": [
+                {
+                    "Name": "Tipo de Ingreso",
+                    "Value": "TERCERO"
+                }
+            ],
+            "TaxesInformation": [],
+            "AllowanceCharge": [],
+            "InvoiceMandateInformation": {
+                "Mandate": {
+                    "IdentificationType": "",
+                    "Identification": "",
+                    "RegistrationName": "",
+                    "DV": ""
+                }
+            }
+        },
+        {
+            "ItemReference": "1043",
+            "Name": "SMITCO F-332529 MOVILIZACION",
+            "Quatity": 1,
+            "Price": 438889,
+            "LineAllowanceTotal": 0,
+            "LineChargeTotal": 0,
+            "LineTotalTaxes": 0,
+            "LineTotal": 438889,
+            "LineExtensionAmount": 438889,
+            "MeasureUnitCode": "94",
+            "FreeOFChargeIndicator": 0,
+            "AdditionalReference": [],
+            "AdditionalProperty": [
+                {
+                    "Name": "Tipo de Ingreso",
+                    "Value": "TERCERO"
+                }
+            ],
+            "TaxesInformation": [],
+            "AllowanceCharge": [],
+            "InvoiceMandateInformation": {
+                "Mandate": {
+                    "IdentificationType": "",
+                    "Identification": "",
+                    "RegistrationName": "",
+                    "DV": ""
+                }
+            }
+        },
+        {
+            "ItemReference": "1030",
+            "Name": "VR.4x1000 Ley 863 dic.29\/2003 S$1.115.021",
+            "Quatity": 1,
+            "Price": 4460,
+            "LineAllowanceTotal": 0,
+            "LineChargeTotal": 0,
+            "LineTotalTaxes": 0,
+            "LineTotal": 4460,
+            "LineExtensionAmount": 4460,
+            "MeasureUnitCode": "94",
+            "FreeOFChargeIndicator": 0,
+            "AdditionalReference": [],
+            "AdditionalProperty": [
+                {
+                    "Name": "Tipo de Ingreso",
+                    "Value": "TERCERO"
+                }
+            ],
+            "TaxesInformation": [],
+            "AllowanceCharge": [],
+            "InvoiceMandateInformation": {
+                "Mandate": {
+                    "IdentificationType": "",
+                    "Identification": "",
+                    "RegistrationName": "",
+                    "DV": ""
+                }
+            }
+        },
+        {
+            "ItemReference": "2003",
+            "Name": "SERV AGENCIAMIENTO INTEGRAL $",
+            "Quatity": 1,
+            "Price": 309902,
+            "LineAllowanceTotal": 0,
+            "LineChargeTotal": 0,
+            "LineTotalTaxes": 58881,
+            "LineTotal": 368783,
+            "LineExtensionAmount": 309902,
+            "MeasureUnitCode": "94",
+            "FreeOFChargeIndicator": 0,
+            "AdditionalReference": [],
+            "AdditionalProperty": [
+                {
+                    "Name": "Tipo de Ingreso",
+                    "Value": "PROPIO"
+                }
+            ],
+            "TaxesInformation": [
+                {
+                    "Id": "01",
+                    "TaxEvidenceIndicator": false,
+                    "TaxableAmount": 309902,
+                    "TaxAmount": 58881,
+                    "Percent": 19,
+                    "BaseUnitMeasure": "",
+                    "PerUnitAmount": ""
+                }
+            ],
+            "AllowanceCharge": [],
+            "InvoiceMandateInformation": {
+                "Mandate": {
+                    "IdentificationType": "",
+                    "Identification": "",
+                    "RegistrationName": "",
+                    "DV": ""
+                }
+            }
+        },
+        {
+            "ItemReference": "2009",
+            "Name": "VR.ELAB.DECLARAC. IMPORTAC X 53",
+            "Quatity": 1,
+            "Price": 212106,
+            "LineAllowanceTotal": 0,
+            "LineChargeTotal": 0,
+            "LineTotalTaxes": 40300,
+            "LineTotal": 252406,
+            "LineExtensionAmount": 212106,
+            "MeasureUnitCode": "94",
+            "FreeOFChargeIndicator": 0,
+            "AdditionalReference": [],
+            "AdditionalProperty": [
+                {
+                    "Name": "Tipo de Ingreso",
+                    "Value": "PROPIO"
+                }
+            ],
+            "TaxesInformation": [
+                {
+                    "Id": "01",
+                    "TaxEvidenceIndicator": false,
+                    "TaxableAmount": 212106,
+                    "TaxAmount": 40300,
+                    "Percent": 19,
+                    "BaseUnitMeasure": "",
+                    "PerUnitAmount": ""
+                }
+            ],
+            "AllowanceCharge": [],
+            "InvoiceMandateInformation": {
+                "Mandate": {
+                    "IdentificationType": "",
+                    "Identification": "",
+                    "RegistrationName": "",
+                    "DV": ""
+                }
+            }
+        },
+        {
+            "ItemReference": "2042",
+            "Name": "VR.ELAB.DECL VALOR X 53",
+            "Quatity": 1,
+            "Price": 212106,
+            "LineAllowanceTotal": 0,
+            "LineChargeTotal": 0,
+            "LineTotalTaxes": 40300,
+            "LineTotal": 252406,
+            "LineExtensionAmount": 212106,
+            "MeasureUnitCode": "94",
+            "FreeOFChargeIndicator": 0,
+            "AdditionalReference": [],
+            "AdditionalProperty": [
+                {
+                    "Name": "Tipo de Ingreso",
+                    "Value": "PROPIO"
+                }
+            ],
+            "TaxesInformation": [
+                {
+                    "Id": "01",
+                    "TaxEvidenceIndicator": false,
+                    "TaxableAmount": 212106,
+                    "TaxAmount": 40300,
+                    "Percent": 19,
+                    "BaseUnitMeasure": "",
+                    "PerUnitAmount": ""
+                }
+            ],
+            "AllowanceCharge": [],
+            "InvoiceMandateInformation": {
+                "Mandate": {
+                    "IdentificationType": "",
+                    "Identification": "",
+                    "RegistrationName": "",
+                    "DV": ""
+                }
+            }
+        },
+        {
+            "ItemReference": "2052",
+            "Name": "VR.RECONOCIMIENTO X 2H",
+            "Quatity": 1,
+            "Price": 75522,
+            "LineAllowanceTotal": 0,
+            "LineChargeTotal": 0,
+            "LineTotalTaxes": 14349,
+            "LineTotal": 89871,
+            "LineExtensionAmount": 75522,
+            "MeasureUnitCode": "94",
+            "FreeOFChargeIndicator": 0,
+            "AdditionalReference": [],
+            "AdditionalProperty": [
+                {
+                    "Name": "Tipo de Ingreso",
+                    "Value": "PROPIO"
+                }
+            ],
+            "TaxesInformation": [
+                {
+                    "Id": "01",
+                    "TaxEvidenceIndicator": false,
+                    "TaxableAmount": 75522,
+                    "TaxAmount": 14349,
+                    "Percent": 19,
+                    "BaseUnitMeasure": "",
+                    "PerUnitAmount": ""
+                }
+            ],
+            "AllowanceCharge": [],
+            "InvoiceMandateInformation": {
+                "Mandate": {
+                    "IdentificationType": "",
+                    "Identification": "",
+                    "RegistrationName": "",
+                    "DV": ""
+                }
+            }
+        }
+    ],
+    "InvoiceTaxTotal": [
+        {
+            "Id": "01",
+            "TaxEvidenceIndicator": false,
+            "TaxableAmount": 809636,
+            "TaxAmount": 153830,
+            "Percent": 19,
+            "BaseUnitMeasure": "",
+            "PerUnitAmount": ""
+        },
+        {
+            "Id": "05",
+            "TaxEvidenceIndicator": true,
+            "TaxableAmount": 809636,
+            "TaxAmount": 23075,
+            "Percent": 15,
+            "BaseUnitMeasure": "",
+            "PerUnitAmount": ""
+        },
+        {
+            "Id": "07",
+            "TaxEvidenceIndicator": true,
+            "TaxableAmount": 809636,
+            "TaxAmount": 8096,
+            "Percent": 1,
+            "BaseUnitMeasure": "",
+            "PerUnitAmount": ""
+        }
+    ],
+    "InvoiceAllowanceCharge": [],
+    "InvoiceTotalOwn": {
+        "LineExtensionAmount": 809636,
+        "TaxExclusiveAmount": 809636,
+        "TaxAmount": 153830,
+        "PayableAmount": 963466
+    },
+    "InvoiceTotalOthers": {
+        "LineExtensionAmount": 1119481,
+        "TaxExclusiveAmount": 0,
+        "TaxAmount": 0,
+        "PayableAmount": 1119481
+    },
+    "InvoiceTotal": {
+        "LineExtensionAmount": 1929117,
+        "TaxExclusiveAmount": 809636,
+        "TaxInclusiveAmount": 2082947,
+        "AllowanceTotalAmount": 0,
+        "ChargeTotalAmount": 0,
+        "PrePaidAmount": 0,
+        "PayableAmount": 2082947
+    },
+    "Documents": [
+        {
+            "Name": "Procesos_Drummond_SMR18921_401225.xlsx",
+            "ID": "25027349-cf1f-4ae3-95fa-3cc66fb8acc4"
+        }
+    ]
+}
