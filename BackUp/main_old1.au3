@@ -13,22 +13,176 @@
 #include "modulo_sql.au3"
 #include "modulo_misc.au3"
 
-;~ Local $sStartDate = "16/06/2021"
-;~ Local $sEndDate = "17/06/2021"
-;~ Local $sCosteoDrummondQuery = "SELECT * FROM Repecev2005.dbo.VCosteoDrummond_fact WHERE FECHAFACTURA  BETWEEN  '" & $sStartDate & "' and '" & $sEndDate & "' ORDER BY FACTURASERVICIOS"
-
 ;~ Local $sSQL_InvoiceNumber = "BQA102372"
-;~ Local $sSQL_InvoiceNumber = "SMR18947"
+Local $sSQL_InvoiceNumber = "SMR18947"
+
 Local $sSQL_InvoiceNumber = "SMR18921"
 Local $sCosteoDrummondQuery = "SELECT * FROM [Repecev2005].[dbo].[VCosteoDrummond_fact] WHERE FACTURASERVICIOS LIKE '" & $sSQL_InvoiceNumber & "'"
 Local $aTRK_Data = _ModuloSQL_SQL_SELECT($sCosteoDrummondQuery)
+
 If UBound($aTRK_Data) < 2 Then
 	ConsoleWrite('DATOS INSUFICIENTES' & @CRLF)
 	Exit
 EndIf
+
 _JsonFactData($sSQL_InvoiceNumber)
-;~ _JsonCodedData()
-Exit
+_JsonCodedData()
+_InformeLote()
+
+Func _InformeLote()
+	Local $aIDDIM_Data = _2dArray_UniqueElements($aTRK_Data, 0) ;Se define la columna 0 como criterio de elementos repetidos, dado que campo IDDIM es único para cálculo de valor CIF
+	Local $sLote = "PorDefinir"
+	Local $sServicio = "PorDefinir"
+	Local $sInvoice = $aTRK_Data[1][29]
+	Local $sInvoiceDate = $aTRK_Data[1][31]
+	Local $sCIFUS = _CIF($aIDDIM_Data, 'USD')
+	Local $sTCRM = Number($aTRK_Data[1][16])
+	Local $sCIFCOP = _CIF($aIDDIM_Data, 'COP')
+	Local $sSubtotal ;Subtotal ubicado en zona de información de items
+	Local $sSubtotal
+	Local $sIVA
+	Local $sReteIVA
+	Local $sReteICA
+	Local $sAnticipo
+	Local $sTotal
+	Local $sPO
+	Local $sDO
+	Local $sDocumentoTransporte
+	Local $sContenedor
+	Local $sObservaciones
+	Local $sValorFobUS
+	Local $sBooking
+	Local $sLineaOrdenCompra
+	Local $aReporteData[2][66]
+	$aReporteData[0][0] = "LOTE"
+	$aReporteData[0][1] = "SERVICIO"
+	$aReporteData[0][2] = "INVOICE "
+	$aReporteData[0][3] = "INVOICE DATE"
+	$aReporteData[0][4] = "CIF US $"
+	$aReporteData[0][5] = "TCRM"
+	$aReporteData[0][6] = "CIF COP $"
+	$aReporteData[0][7] = "MANEJO NAVIERO"
+	$aReporteData[0][8] = "USO INSTALACIONES"
+	$aReporteData[0][9] = "BODEGAJE"
+	$aReporteData[0][10] = "VUCE"
+	$aReporteData[0][11] = "VACIADO"
+	$aReporteData[0][12] = "INSPECCION DIAN"
+	$aReporteData[0][13] = "DEPOSITO CONTENEDOR"
+	$aReporteData[0][14] = "LIBERACION Y MANEJO GUIA"
+	$aReporteData[0][15] = "DEMORAS CONTENEDOR"
+	$aReporteData[0][16] = "MOVILIZACION INSPECCION"
+	$aReporteData[0][17] = "ARANCEL"
+	$aReporteData[0][18] = "IVA"
+	$aReporteData[0][19] = "MAQUINA INTERNA"
+	$aReporteData[0][20] = "VISTOS BUENOS"
+	$aReporteData[0][21] = "CARGUE Y DESCARGUE"
+	$aReporteData[0][22] = "PORTEO"
+	$aReporteData[0][23] = "INSPECCION RECONOCIMIENTO"
+	$aReporteData[0][24] = "TRASLADO"
+	$aReporteData[0][25] = "STACKER"
+	$aReporteData[0][26] = "DAÑOS"
+	$aReporteData[0][27] = "SUCIEDAD"
+	$aReporteData[0][28] = "EMISION BL"
+	$aReporteData[0][29] = "APERTURA Y CIERRE"
+	$aReporteData[0][30] = "CERTIFICADOS"
+	$aReporteData[0][31] = "BASCULAS"
+	$aReporteData[0][32] = "PAPELERIA"
+	$aReporteData[0][33] = "CAMBIO MODALIDAD"
+	$aReporteData[0][34] = "HORA ADICIONAL"
+	$aReporteData[0][35] = "CARGO FIJO"
+	$aReporteData[0][36] = "MANEJO DE DOCUMENTOS"
+	$aReporteData[0][37] = "CAMA ALTA-BAJA"
+	$aReporteData[0][38] = "SERVICIO DE CARPADO"
+	$aReporteData[0][39] = "SERVICIO  CONSOLIDACION"
+	$aReporteData[0][40] = "COMODATOS"
+	$aReporteData[0][41] = "TRABAJOS VARIOS HORAS/HOMBRES"
+	$aReporteData[0][42] = "SELLOS DE CONTENEDOR"
+	$aReporteData[0][43] = "VR 4XMIL"
+	$aReporteData[0][44] = "SUBTOTAL"
+	$aReporteData[0][45] = "SERVICIO ADUANA"
+	$aReporteData[0][46] = "RECONOCIMIENTO MCIA"
+	$aReporteData[0][47] = "ELABORACION REGISTROS DE IMP. "
+	$aReporteData[0][48] = "ELABORACION  DECLARACIONES DE IMPORTACION"
+	$aReporteData[0][49] = "ELABORACION DECLARACIONES DE VALOR"
+	$aReporteData[0][50] = "DESCARGUE DIRECTO"
+	$aReporteData[0][51] = "VISTO BUENO"
+	$aReporteData[0][52] = "SUBTOTAL"
+	$aReporteData[0][53] = "IVA"
+	$aReporteData[0][54] = "RETE IVA"
+	$aReporteData[0][55] = "RETE ICA"
+	$aReporteData[0][56] = "ANTICIPO"
+	$aReporteData[0][57] = "TOTAL"
+	$aReporteData[0][58] = "PO."
+	$aReporteData[0][59] = "DO"
+	$aReporteData[0][60] = "DOCUMENTO  DE TRANSPORTE"
+	$aReporteData[0][61] = "CONTENEDOR"
+	$aReporteData[0][62] = "OBSERVACIONES"
+	$aReporteData[0][63] = "VALOR.FOB US"
+	$aReporteData[0][64] = "BOOKING"
+	$aReporteData[0][65] = "LINEA ORDEN DE COMPRA"
+	;######################################################################
+$aReporteData[1][7] = '1034'
+$aReporteData[1][8] = '1003'
+$aReporteData[1][9] = '1004'
+$aReporteData[1][10] = '1016'
+$aReporteData[1][11] = '1008'
+$aReporteData[1][12] = '1042'
+$aReporteData[1][13] = '1010'
+$aReporteData[1][14] = '1005'
+$aReporteData[1][15] = '1011'
+$aReporteData[1][16] = '1043'
+$aReporteData[1][17] = '1001'
+$aReporteData[1][18] = '1002'
+$aReporteData[1][19] = '1061'
+$aReporteData[1][20] = '1023'
+$aReporteData[1][21] = '1025'
+$aReporteData[1][22] = '1024'
+$aReporteData[1][23] = '1046'
+$aReporteData[1][24] = '1018'
+$aReporteData[1][25] = '1045'
+$aReporteData[1][26] = '1050'
+$aReporteData[1][27] = '1026'
+$aReporteData[1][28] = '1028'
+$aReporteData[1][29] = '1015'
+$aReporteData[1][30] = '1020'
+$aReporteData[1][31] = '1029'
+$aReporteData[1][32] = '1038'
+$aReporteData[1][33] = '1048'
+$aReporteData[1][34] = '1052'
+$aReporteData[1][35] = '1054'
+$aReporteData[1][36] = '1006'
+$aReporteData[1][37] = '1044'
+$aReporteData[1][38] = '1060'
+$aReporteData[1][39] = '1007'
+$aReporteData[1][40] = '1039'
+$aReporteData[1][41] = '1049'
+$aReporteData[1][42] = '1051'
+$aReporteData[1][43] = '1031'
+$aReporteData[1][44] = '1012'
+$aReporteData[1][45] = '1027'
+$aReporteData[1][46] = '1022'
+$aReporteData[1][47] = '1032'
+$aReporteData[1][48] = '1041'
+$aReporteData[1][49] = '1009'
+$aReporteData[1][50] = '1014'
+$aReporteData[1][51] = '1030'
+$aReporteData[1][52] = '2003'
+$aReporteData[1][53] = '2052'
+$aReporteData[1][54] = '2005'
+$aReporteData[1][55] = '2009'
+$aReporteData[1][56] = '2042'
+$aReporteData[1][57] = '2007'
+$aReporteData[1][58] = '2045'
+	;######################################################################
+	$aReporteData[1][0] = $sLote
+	$aReporteData[1][1] = $sServicio
+	$aReporteData[1][2] = $sInvoice
+	$aReporteData[1][3] = $sInvoiceDate
+	$aReporteData[1][4] = $sCIFUS
+	$aReporteData[1][5] = $sTCRM
+	$aReporteData[1][6] = $sCIFCOP
+	_ArrayDisplay($aReporteData, '$aReporteData')
+EndFunc   ;==>_InformeLote
 
 Func _JsonFactData($sSQL_InvoiceNumber)
 	Local $sJsonFactQuery = "SELECT JsonFact FROM [BotAbc].[dbo].[tfact_ApiProcesos] where InvoiceNumber = '" & $sSQL_InvoiceNumber & "'"
@@ -41,26 +195,25 @@ Func _JsonFactData($sSQL_InvoiceNumber)
 	Local $sJsonInvoiceData = _ReadDataFromFile($sJsonFile_InvoiceData)
 	StringReplace($sJsonInvoiceData, '"ItemReference":', "")
 	Local $iItemsNumber = @extended - 1
-	Local $aItemReferences[@extended][3]
+	Local $aItemReferences[@extended][4]
 	Local $oJsonInvoiceData = Json_Decode($sJsonInvoiceData)
 	For $i = 0 To $iItemsNumber Step +1
 		Local $iItemReferenceCode = Json_Get($oJsonInvoiceData, ".ItemInformation[" & $i & "].ItemReference")
 		Local $iItemReferenceName = Json_Get($oJsonInvoiceData, ".ItemInformation[" & $i & "].Name")
+		Local $iItemReferenceAmount = Json_Get($oJsonInvoiceData, ".ItemInformation[" & $i & "].LineExtensionAmount")
 		Local $aIndexNoConcepto = _ArraySearch($aDrummondConceptos, $iItemReferenceCode, Default, Default, Default, Default, Default, 1, False)
 		$aItemReferences[$i][0] = $iItemReferenceCode
 		$aItemReferences[$i][1] = $iItemReferenceName
 		$aItemReferences[$i][2] = $aDrummondConceptos[$aIndexNoConcepto][2]
+		$aItemReferences[$i][3] = $iItemReferenceAmount
 	Next
 	Local $sCheckItems = _CheckItems($aItemReferences)
 	If $sCheckItems Then
-_ArrayDisplay($aItemReferences,'Test')
+		ConsoleWrite('Fin funcion JsonFactData' & @CRLF)
 	Else
 		ConsoleWrite($sCheckItems & @CRLF)
 	EndIf
-
-;~ Json_Dump($sJsonInvoiceData)
 EndFunc   ;==>_JsonFactData
-
 
 Func _CheckItems($aArray)
 	Local $aUniqueItemReferences = _ArrayUnique($aArray, Default, Default, Default, 0)
@@ -73,16 +226,6 @@ Func _CheckItems($aArray)
 		Return 'Hay ' & $iDiffItems & ' elementos repetidos en esta factura. Por favor validar' & @CRLF
 	EndIf
 EndFunc   ;==>_CheckItems
-
-Local $aIDDIM_Data = _2dArray_UniqueElements($aTRK_Data, 0) ;Se define la columna 0 como criterio de elementos repetidos, dado que campo IDDIM es único para cálculo de valor CIF
-
-Local $sLote = "PorDefinir"
-Local $sServicio = "PorDefinir"
-Local $sInvoice = $aTRK_Data[1][29]
-Local $sInvoiceDate = $aTRK_Data[1][31]
-Local $sCIFUS = _CIF($aIDDIM_Data, 'USD')
-Local $sTCRM = Number($aTRK_Data[1][16])
-Local $sCIFCOP = _CIF($aIDDIM_Data, 'COP')
 
 Func _JsonCodedData()
 	Local $sManejoNaviero = '1034'
@@ -191,28 +334,7 @@ Func _JsonCodedData()
 	$aJsonReportData[49] = $sElaboracionDeclaracionesValor
 	$aJsonReportData[50] = $sDescargueDirecto
 	$aJsonReportData[51] = $sVistoBueno
-	_ArrayDisplay($aJsonReportData, '$aJsonReportData')
 EndFunc   ;==>_JsonCodedData
-
-
-
-Local $sSubtotal ;Subtotal ubicado en zona de información de items
-
-
-Local $sSubtotal
-Local $sIVA
-Local $sReteIVA
-Local $sReteICA
-Local $sAnticipo
-Local $sTotal
-Local $sPO
-Local $sDO
-Local $sDocumentoTransporte
-Local $sContenedor
-Local $sObservaciones
-Local $sValorFobUS
-Local $sBooking
-Local $sLineaOrdenCompra
 
 Func _2dArray_UniqueElements($aArray, $iCol)
 	Local $aArrayUnique = _ArrayUnique($aArray, $iCol, 1, Default, 0) ;Configuración que permite seleccionar únicamente la información no repetida de la tabla sin header ni COUNT
