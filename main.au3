@@ -28,10 +28,15 @@ Local $sJsonInvoiceData = _ReadDataFromFile($sJsonFile_InvoiceData) ;~ Json_Dump
 Local $oJsonInvoiceAllData = Json_Decode($sJsonInvoiceData)
 Local $aJsonFactItemsData = _JsonFactItemsData($oJsonInvoiceAllData)
 Local $aJsonFactTaxesData = _JsonFactTaxesData($oJsonInvoiceAllData)
+Local $aJsonFactTotalData = _JsonFactTotalData($oJsonInvoiceAllData)
 If IsArray($aJsonFactItemsData) And IsArray($aJsonFactTaxesData) Then
 	Local $aInformeLote = _InformeLote($aTRK_Data, $aJsonFactItemsData, $aJsonFactTaxesData)
 	_ArrayDisplay($aInformeLote, '$aInformeLote')
 EndIf
+
+Func _JsonFactTotalData($oJsonInvoiceAllData)
+
+EndFunc   ;==>_JsonFactTotalData
 
 Func _InformeLote($aTRK_Data, $aJsonFactItemsData, $aJsonFactTaxesData)
 	Local $aIDDIM_Data = _2dArray_UniqueElements($aTRK_Data, 0) ;Se define la columna 0 como criterio de elementos repetidos, dado que campo IDDIM es único para cálculo de valor CIF
@@ -73,13 +78,15 @@ Func _InformeLote($aTRK_Data, $aJsonFactItemsData, $aJsonFactTaxesData)
 	Local $iJsonFactIVA = $aJsonFactTaxesData[0]
 	Local $iJsonFactReteIVA = $aJsonFactTaxesData[1]
 	Local $iJsonFactReteICA = $aJsonFactTaxesData[2]
-	Local $iJsonFactAnticipo
-	Local $iJsonFactTotal
-	$aReporteData[2][51] = $iSubtotalOthers
-	$aReporteData[2][59] = $iSubtotalOwn
-	$aReporteData[2][60] = $iJsonFactIVA
-	$aReporteData[2][61] = $iJsonFactReteIVA
-	$aReporteData[2][62] = $iJsonFactReteICA
+	Local $iJsonFactAnticipo = Json_Get($oJsonInvoiceAllData, ".InvoiceTotal.PrePaidAmount")
+	Local $iJsonFactTotal = Json_Get($oJsonInvoiceAllData, ".InvoiceTotal.PayableAmount")
+	$aReporteData[2][51] = Number($iSubtotalOthers)
+	$aReporteData[2][59] = Number($iSubtotalOwn)
+	$aReporteData[2][60] = Number($iJsonFactIVA)
+	$aReporteData[2][61] = Number($iJsonFactReteIVA)
+	$aReporteData[2][62] = Number($iJsonFactReteICA)
+	$aReporteData[2][63] = Number($iJsonFactAnticipo)
+	$aReporteData[2][64] = Number($iJsonFactTotal)
 	Return $aReporteData
 EndFunc   ;==>_InformeLote
 
@@ -94,8 +101,6 @@ Func _JsonFactItemsData($oJsonInvoiceAllData)
 		Local $iItemReferenceAmount = Json_Get($oJsonInvoiceAllData, ".ItemInformation[" & $i & "].LineExtensionAmount")
 		Local $iSubtotalOwn = Json_Get($oJsonInvoiceAllData, ".InvoiceTotalOwn.LineExtensionAmount")
 		Local $iSubtotalOthers = Json_Get($oJsonInvoiceAllData, ".InvoiceTotalOthers.LineExtensionAmount")
-		;.InvoiceTotal.PrePaidAmount  =0
-		;.InvoiceTotal.PayableAmount  =2082947
 		Local $aIndexNoConcepto = _ArraySearch($aDrummondConceptos, $iItemReferenceCode, Default, Default, Default, Default, Default, 1, False)
 		$aItemReferences[$i][0] = ''
 		$aItemReferences[$i][1] = $iItemReferenceCode
