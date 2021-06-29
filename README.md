@@ -74,11 +74,11 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 * **Jesús Antobio Ladino Valbuena** - *Initial work* - [Ladval](https://github.com/Ladval)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/ladval/Drummond/contributors) who participated in this project.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the ABC Repecev S.A.S License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
