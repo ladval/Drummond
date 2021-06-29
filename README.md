@@ -1,5 +1,7 @@
 # Drummond
 
+Please read [CONTRIBUTING.md](htt![bfXbvHCttWaRVyGIXZMusuKFPHMXqhmeztDllFrLcrGRMCKlKHMmfUQzMQkLDVbM](https://user-images.githubusercontent.com/85692930/123810901-667d4580-d8b8-11eb-9dc6-89e7b14752ba.png)
+
 Generación automática de reporte contable Drummond con envío períodico de correo electrónico.
 
 ## Getting Started
@@ -63,8 +65,6 @@ Add additional notes about how to deploy this on a live system
 * [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
 ## Contributing
-
-Please read [CONTRIBUTING.md](htt![bfXbvHCttWaRVyGIXZMusuKFPHMXqhmeztDllFrLcrGRMCKlKHMmfUQzMQkLDVbM](https://user-images.githubusercontent.com/85692930/123810901-667d4580-d8b8-11eb-9dc6-89e7b14752ba.png)
 
 ps://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
