@@ -1,3 +1,6 @@
+
+![bfXbvHCttWaRVyGIXZMusuKFPHMXqhmeztDllFrLcrGRMCKlKHMmfUQzMQkLDVbM](https://user-images.githubusercontent.com/85692930/123811136-99273e00-d8b8-11eb-8525-a3193ee79f42.png)
+
 # Drummond
 
 Generación automática de reporte contable Drummond con envío períodico de correo electrónico.
@@ -64,7 +67,7 @@ Add additional notes about how to deploy this on a live system
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+ps://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
