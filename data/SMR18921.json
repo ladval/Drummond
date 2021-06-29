@@ -9,7 +9,7 @@
         "SubdivisionCode": "47",
         "SubdivisionName": "MAGDALENA",
         "CityCode": "47189",
-        "CityName": "CI\u00c9NAGA",
+        "CityName": "CIu00c9NAGA",
         "AddressLine": "KILOMETRO 10 VIA CIENAGA",
         "Telephone": "4320555",
         "Email": "facturacion@drummondltd.com,facturacion-noreply@abcrepecev.com",
@@ -70,7 +70,7 @@
             "Value": "0"
         },
         {
-            "Name": "AWL\/BL",
+            "Name": "AWL/BL",
             "Value": "PERRY SUPPLY        "
         },
         {
@@ -103,7 +103,7 @@
         },
         {
             "Name": "Observaciones:",
-            "Value": "CONTENEDOR TCNU6978662\/ BL SMLU6593971A?NAC: 401225"
+            "Value": "CONTENEDOR TCNU6978662/ BL SMLU6593971A?NAC: 401225"
         },
         {
             "Name": "Vencimiento:",
@@ -156,7 +156,7 @@
         },
         {
             "ItemReference": "1025",
-            "Name": "SMITCO F-332552 CARGUE \/ DESCARGUE",
+            "Name": "SMITCO F-332552 CARGUE / DESCARGUE",
             "Quatity": 1,
             "Price": 129931,
             "LineAllowanceTotal": 0,
@@ -246,7 +246,7 @@
         },
         {
             "ItemReference": "1030",
-            "Name": "VR.4x1000 Ley 863 dic.29\/2003 S$1.115.021",
+            "Name": "VR.4x1000 Ley 863 dic.29/2003 S$1.115.021",
             "Quatity": 1,
             "Price": 4460,
             "LineAllowanceTotal": 0,

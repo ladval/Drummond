@@ -1,6 +1,6 @@
-# Project Title
+# Drummond
 
-One Paragraph of project description goes here
+Generación automática de reporte contable Drummond con envío períodico de correo electrónico.
 
 ## Getting Started
 
