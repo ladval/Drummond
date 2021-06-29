@@ -1,6 +1,6 @@
 # Drummond
 
-Please read [CONTRIBUTING.md](htt![bfXbvHCttWaRVyGIXZMusuKFPHMXqhmeztDllFrLcrGRMCKlKHMmfUQzMQkLDVbM](https://user-images.githubusercontent.com/85692930/123810901-667d4580-d8b8-11eb-9dc6-89e7b14752ba.png)
+(https://user-images.githubusercontent.com/85692930/123810901-667d4580-d8b8-11eb-9dc6-89e7b14752ba.png)
 
 Generación automática de reporte contable Drummond con envío períodico de correo electrónico.
 
