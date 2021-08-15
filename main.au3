@@ -21,8 +21,11 @@ WEnd
 #include "modulo_sql.au3"
 #include "modulo_misc.au3"
 
-Local $sInvoiceNumber = "SMR18921"
+Local $sInvoiceNumber = "SMR19052"
 Local $sCosteoDrummondQuery = "SELECT * FROM [Repecev2005].[dbo].[VCosteoDrummond_fact] WHERE FACTURASERVICIOS LIKE '" & $sInvoiceNumber & "'"
+
+ConsoleWrite($sCosteoDrummondQuery&@CRLF)
+
 Local $aTRK_Data = _ModuloSQL_SQL_SELECT($sCosteoDrummondQuery)
 If UBound($aTRK_Data) < 2 Then
 	ConsoleWrite('DATOS INSUFICIENTES' & @CRLF)
