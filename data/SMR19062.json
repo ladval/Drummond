@@ -9,10 +9,10 @@
         "SubdivisionCode": "47",
         "SubdivisionName": "MAGDALENA",
         "CityCode": "47189",
-        "CityName": "CIu00c9NAGA",
+        "CityName": "CI\u00c9NAGA",
         "AddressLine": "KILOMETRO 10 VIA CIENAGA",
         "Telephone": "4320555",
-        "Email": "facturacion@drummondltd.com,facturacion-noreply@abcrepecev.com",
+        "Email": "facturacion@drummondltd.com;facturacion-noreply@abcrepecev.com",
         "CustomerCode": "",
         "AdditionalAccountID": "1",
         "TaxLevelCodeListName": "48",
@@ -25,9 +25,9 @@
     },
     "InvoiceGeneralInformation": {
         "InvoiceAuthorizationNumber": "18763002723798",
-        "PreinvoiceNumber": 18921,
-        "InvoiceNumber": "18921",
-        "DaysOff": "8",
+        "PreinvoiceNumber": 19062,
+        "InvoiceNumber": "19062",
+        "DaysOff": "7",
         "Currency": "COP",
         "ExchangeRate": 0,
         "ExchangeRateDate": "",
@@ -44,7 +44,7 @@
         "CityCode": "",
         "CityName": "",
         "ContactPerson": "",
-        "DeliveryDate": "2021-06-18T14:04:55",
+        "DeliveryDate": "2021-08-04T12:23:32",
         "DeliveryCompany": ""
     },
     "AdditionalDocuments": {
@@ -70,7 +70,7 @@
             "Value": "0"
         },
         {
-            "Name": "AWL/BL",
+            "Name": "AWL\/BL",
             "Value": "PERRY SUPPLY        "
         },
         {
@@ -87,15 +87,15 @@
         },
         {
             "Name": "Concepto o Referencia:",
-            "Value": "S2105-067A"
+            "Value": "D2107-002A"
         },
         {
             "Name": "No",
-            "Value": "130810429214                  "
+            "Value": "130813191214                  "
         },
         {
             "Name": "Valor en letras:",
-            "Value": "DOS MILLONES CINCUENTA Y UN MIL SETECIENTOS SETENTA Y SEIS PESOS MCTE"
+            "Value": "UN MILLON VEINTITRES MIL SETECIENTOS CUARENTA Y TRES PESOS MCTE"
         },
         {
             "Name": "Valor mercancia:",
@@ -103,11 +103,11 @@
         },
         {
             "Name": "Observaciones:",
-            "Value": "CONTENEDOR TCNU6978662/ BL SMLU6593971A?NAC: 401225"
+            "Value": "CONTENEDOR TCNU6525183?BL SMLU6654816A?NAC: 404717"
         },
         {
             "Name": "Vencimiento:",
-            "Value": "2021-06-26"
+            "Value": "2021-08-11"
         },
         {
             "Name": "TRM:",
@@ -116,6 +116,10 @@
         {
             "Name": "JefeCuenta:",
             "Value": "PEDROZA HERNANDEZ JOHNNY"
+        },
+        {
+            "Name": "FechaLevante:",
+            "Value": "2021-07-19"
         }
     ],
     "PaymentSummary": {
@@ -125,15 +129,15 @@
     },
     "ItemInformation": [
         {
-            "ItemReference": "1003",
-            "Name": "SPSM F-800453852 USO CONTENEDOR",
+            "ItemReference": "1016",
+            "Name": "SPSM F-800456795 USO CONTENEDOR",
             "Quatity": 1,
-            "Price": 180460,
+            "Price": 380846,
             "LineAllowanceTotal": 0,
             "LineChargeTotal": 0,
             "LineTotalTaxes": 0,
-            "LineTotal": 180460,
-            "LineExtensionAmount": 180460,
+            "LineTotal": 380846,
+            "LineExtensionAmount": 380846,
             "MeasureUnitCode": "94",
             "FreeOFChargeIndicator": 0,
             "AdditionalReference": [],
@@ -156,74 +160,14 @@
         },
         {
             "ItemReference": "1025",
-            "Name": "SMITCO F-332552 CARGUE / DESCARGUE",
+            "Name": "SMITCO F-335804 CARGUE \/ DESCARGUE",
             "Quatity": 1,
-            "Price": 129931,
+            "Price": 274209,
             "LineAllowanceTotal": 0,
             "LineChargeTotal": 0,
             "LineTotalTaxes": 0,
-            "LineTotal": 129931,
-            "LineExtensionAmount": 129931,
-            "MeasureUnitCode": "94",
-            "FreeOFChargeIndicator": 0,
-            "AdditionalReference": [],
-            "AdditionalProperty": [
-                {
-                    "Name": "Tipo de Ingreso",
-                    "Value": "TERCERO"
-                }
-            ],
-            "TaxesInformation": [],
-            "AllowanceCharge": [],
-            "InvoiceMandateInformation": {
-                "Mandate": {
-                    "IdentificationType": "",
-                    "Identification": "",
-                    "RegistrationName": "",
-                    "DV": ""
-                }
-            }
-        },
-        {
-            "ItemReference": "1046",
-            "Name": "SMITCO F-332529 INSPECCION  RECONOCIMIENTO",
-            "Quatity": 1,
-            "Price": 365741,
-            "LineAllowanceTotal": 0,
-            "LineChargeTotal": 0,
-            "LineTotalTaxes": 0,
-            "LineTotal": 365741,
-            "LineExtensionAmount": 365741,
-            "MeasureUnitCode": "94",
-            "FreeOFChargeIndicator": 0,
-            "AdditionalReference": [],
-            "AdditionalProperty": [
-                {
-                    "Name": "Tipo de Ingreso",
-                    "Value": "TERCERO"
-                }
-            ],
-            "TaxesInformation": [],
-            "AllowanceCharge": [],
-            "InvoiceMandateInformation": {
-                "Mandate": {
-                    "IdentificationType": "",
-                    "Identification": "",
-                    "RegistrationName": "",
-                    "DV": ""
-                }
-            }
-        },
-        {
-            "ItemReference": "1043",
-            "Name": "SMITCO F-332529 MOVILIZACION",
-            "Quatity": 1,
-            "Price": 438889,
-            "LineAllowanceTotal": 0,
-            "LineChargeTotal": 0,
-            "LineTotalTaxes": 0,
-            "LineTotal": 438889,
-            "LineExtensionAmount": 438889,
+            "LineTotal": 274209,
+            "LineExtensionAmount": 274209,
             "MeasureUnitCode": "94",
             "FreeOFChargeIndicator": 0,
             "AdditionalReference": [],
@@ -246,14 +190,14 @@
         },
         {
             "ItemReference": "1030",
-            "Name": "VR.4x1000 Ley 863 dic.29/2003 S$1.115.021",
+            "Name": "VR.4x1000 Ley 863 dic.29\/2003 S$655.055",
             "Quatity": 1,
-            "Price": 4460,
+            "Price": 2620,
             "LineAllowanceTotal": 0,
             "LineChargeTotal": 0,
             "LineTotalTaxes": 0,
-            "LineTotal": 4460,
-            "LineExtensionAmount": 4460,
+            "LineTotal": 2620,
+            "LineExtensionAmount": 2620,
             "MeasureUnitCode": "94",
             "FreeOFChargeIndicator": 0,
             "AdditionalReference": [],
@@ -316,14 +260,14 @@
         },
         {
             "ItemReference": "2009",
-            "Name": "VR.ELAB.DECLARAC. IMPORTAC X 53",
+            "Name": "VR.ELAB.DECLARAC. IMPORTAC X 1",
             "Quatity": 1,
-            "Price": 212106,
+            "Price": 4002,
             "LineAllowanceTotal": 0,
             "LineChargeTotal": 0,
-            "LineTotalTaxes": 40300,
-            "LineTotal": 252406,
-            "LineExtensionAmount": 212106,
+            "LineTotalTaxes": 760,
+            "LineTotal": 4762,
+            "LineExtensionAmount": 4002,
             "MeasureUnitCode": "94",
             "FreeOFChargeIndicator": 0,
             "AdditionalReference": [],
@@ -337,8 +281,8 @@
                 {
                     "Id": "01",
                     "TaxEvidenceIndicator": false,
-                    "TaxableAmount": 212106,
-                    "TaxAmount": 40300,
+                    "TaxableAmount": 4002,
+                    "TaxAmount": 760,
                     "Percent": 19,
                     "BaseUnitMeasure": "",
                     "PerUnitAmount": ""
@@ -356,14 +300,14 @@
         },
         {
             "ItemReference": "2042",
-            "Name": "VR.ELAB.DECL VALOR X 53",
+            "Name": "VR.ELAB.DECL VALOR X 1",
             "Quatity": 1,
-            "Price": 212106,
+            "Price": 4002,
             "LineAllowanceTotal": 0,
             "LineChargeTotal": 0,
-            "LineTotalTaxes": 40300,
-            "LineTotal": 252406,
-            "LineExtensionAmount": 212106,
+            "LineTotalTaxes": 760,
+            "LineTotal": 4762,
+            "LineExtensionAmount": 4002,
             "MeasureUnitCode": "94",
             "FreeOFChargeIndicator": 0,
             "AdditionalReference": [],
@@ -377,48 +321,8 @@
                 {
                     "Id": "01",
                     "TaxEvidenceIndicator": false,
-                    "TaxableAmount": 212106,
-                    "TaxAmount": 40300,
-                    "Percent": 19,
-                    "BaseUnitMeasure": "",
-                    "PerUnitAmount": ""
-                }
-            ],
-            "AllowanceCharge": [],
-            "InvoiceMandateInformation": {
-                "Mandate": {
-                    "IdentificationType": "",
-                    "Identification": "",
-                    "RegistrationName": "",
-                    "DV": ""
-                }
-            }
-        },
-        {
-            "ItemReference": "2052",
-            "Name": "VR.RECONOCIMIENTO X 2H",
-            "Quatity": 1,
-            "Price": 75522,
-            "LineAllowanceTotal": 0,
-            "LineChargeTotal": 0,
-            "LineTotalTaxes": 14349,
-            "LineTotal": 89871,
-            "LineExtensionAmount": 75522,
-            "MeasureUnitCode": "94",
-            "FreeOFChargeIndicator": 0,
-            "AdditionalReference": [],
-            "AdditionalProperty": [
-                {
-                    "Name": "Tipo de Ingreso",
-                    "Value": "PROPIO"
-                }
-            ],
-            "TaxesInformation": [
-                {
-                    "Id": "01",
-                    "TaxEvidenceIndicator": false,
-                    "TaxableAmount": 75522,
-                    "TaxAmount": 14349,
+                    "TaxableAmount": 4002,
+                    "TaxAmount": 760,
                     "Percent": 19,
                     "BaseUnitMeasure": "",
                     "PerUnitAmount": ""
@@ -439,8 +343,8 @@
         {
             "Id": "01",
             "TaxEvidenceIndicator": false,
-            "TaxableAmount": 809636,
-            "TaxAmount": 153830,
+            "TaxableAmount": 317906,
+            "TaxAmount": 60401,
             "Percent": 19,
             "BaseUnitMeasure": "",
             "PerUnitAmount": ""
@@ -448,8 +352,8 @@
         {
             "Id": "05",
             "TaxEvidenceIndicator": true,
-            "TaxableAmount": 809636,
-            "TaxAmount": 23075,
+            "TaxableAmount": 317906,
+            "TaxAmount": 9060,
             "Percent": 15,
             "BaseUnitMeasure": "",
             "PerUnitAmount": ""
@@ -457,8 +361,8 @@
         {
             "Id": "07",
             "TaxEvidenceIndicator": true,
-            "TaxableAmount": 809636,
-            "TaxAmount": 8096,
+            "TaxableAmount": 317906,
+            "TaxAmount": 3179,
             "Percent": 1,
             "BaseUnitMeasure": "",
             "PerUnitAmount": ""
@@ -466,30 +370,30 @@
     ],
     "InvoiceAllowanceCharge": [],
     "InvoiceTotalOwn": {
-        "LineExtensionAmount": 809636,
-        "TaxExclusiveAmount": 809636,
-        "TaxAmount": 153830,
-        "PayableAmount": 963466
+        "LineExtensionAmount": 317906,
+        "TaxExclusiveAmount": 317906,
+        "TaxAmount": 60401,
+        "PayableAmount": 378307
     },
     "InvoiceTotalOthers": {
-        "LineExtensionAmount": 1119481,
+        "LineExtensionAmount": 657675,
         "TaxExclusiveAmount": 0,
         "TaxAmount": 0,
-        "PayableAmount": 1119481
+        "PayableAmount": 657675
     },
     "InvoiceTotal": {
-        "LineExtensionAmount": 1929117,
-        "TaxExclusiveAmount": 809636,
-        "TaxInclusiveAmount": 2082947,
+        "LineExtensionAmount": 975581,
+        "TaxExclusiveAmount": 317906,
+        "TaxInclusiveAmount": 1035982,
         "AllowanceTotalAmount": 0,
         "ChargeTotalAmount": 0,
         "PrePaidAmount": 0,
-        "PayableAmount": 2082947
+        "PayableAmount": 1035982
     },
     "Documents": [
         {
-            "Name": "Procesos_Drummond_SMR18921_401225.xlsx",
-            "ID": "25027349-cf1f-4ae3-95fa-3cc66fb8acc4"
+            "Name": "Procesos_Drummond_SMR19062_404717.xlsx",
+            "ID": "2d27affc-4cf5-4578-93cc-ffbbc596f831"
         }
     ]
 }

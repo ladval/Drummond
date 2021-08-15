@@ -1,0 +1,55 @@
+
+$objReporteData = @()
+$objReporteData += New-Object -TypeName PSObject -Property @{'Code' = "1034"; Desc = "MANEJO NAVIERO" } 
+$objReporteData += New-Object -TypeName PSObject -Property @{'Code' = "1034"; Desc = "MANEJO NAVIERO" } 
+$objReporteData += New-Object -TypeName PSObject -Property @{'Code' = "1034"; Desc = "MANEJO NAVIERO" } 
+$objReporteData += New-Object -TypeName PSObject -Property @{'Code' = "1034"; Desc = "MANEJO NAVIERO" } 
+$objReporteData += New-Object -TypeName PSObject -Property @{'Code' = "1034"; Desc = "MANEJO NAVIERO" } 
+$objReporteData += New-Object -TypeName PSObject -Property @{'Code' = "1034"; Desc = "MANEJO NAVIERO" } 
+$objReporteData
+
+# |1034;Desc ="MANEJO NAVIERO"
+# |1003;Desc ="USO INSTALACIONES"
+# |1004;Desc ="BODEGAJE"
+# |1016;Desc ="VUCE"
+# |1008;Desc ="VACIADO"
+# |1042;Desc ="INSPECCION DIAN"
+# |1010;Desc ="DEPOSITO CONTENEDOR"
+# |1005;Desc ="LIBERACION Y MANEJO GUIA"
+# |1011;Desc ="DEMORAS CONTENEDOR"
+# |1043;Desc ="MOVILIZACION INSPECCION"
+# |1001;Desc ="ARANCEL"
+# |1002;Desc ="IVA"
+# |1061;Desc ="MAQUINA INTERNA"
+# |1023;Desc ="VISTOS BUENOS"
+# |1025;Desc ="CARGUE Y DESCARGUE"
+# |1024;Desc ="PORTEO"
+# |1046;Desc ="INSPECCION RECONOCIMIENTO"
+# |1018;Desc ="TRASLADO"
+# |1045;Desc ="STACKER"
+# |1050;Desc ="DAÑOS"
+# |1026;Desc ="SUCIEDAD"
+# |1028;Desc ="EMISION BL"
+# |1015;Desc ="APERTURA Y CIERRE"
+# |1020;Desc ="CERTIFICADOS"
+# |1029;Desc ="BASCULAS"
+# |1038;Desc ="PAPELERIA"
+# |1048;Desc ="CAMBIO MODALIDAD"
+# |1052;Desc ="HORA ADICIONAL"
+# |1054;Desc ="CARGO FIJO"
+# |1006;Desc ="MANEJO DE DOCUMENTOS"
+# |1044;Desc ="CAMA ALTA-BAJA"
+# |1060;Desc ="SERVICIO DE CARPADO"
+# |1007;Desc ="SERVICIOCONSOLIDACION"
+# |1039;Desc ="COMODATOS"
+# |1049;Desc ="TRABAJOS VARIOS HORAS/HOMBRES"
+# |1051;Desc ="SELLOS DE CONTENEDOR"
+# |1031;Desc ="ENVIO"
+# |1012;Desc ="DISMOUNTING"
+# |1027;Desc ="TRANSPORTE"
+# |1022;Desc ="ADICIONAL 1"
+# |1032;Desc ="ADICIONAL 2"
+# |1041;Desc ="ADICIONAL 3"
+# |1009;Desc ="ADICIONAL 4"
+# |1014;Desc ="SERVICIO EXTRAORDINARIO"
+# |1030;Desc ="VR 4XMIL"
