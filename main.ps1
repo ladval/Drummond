@@ -1,59 +1,76 @@
+
+
 # PAQUETES REQUERIDOS
 # Install-Module -Name SqlServer
 # Install-Module -Name ImportExcel
 
-
 $JsonConfigFile = "$PSScriptRoot\settings\settings.json"
 $Global:oJsonSettings = Get-Content -Path $JsonConfigFile | ConvertFrom-Json
+
 . "$PSScriptRoot\sql.ps1"
 . "$PSScriptRoot\jsonData.ps1"
+. "$PSScriptRoot\test.ps1"
 
-
-
-
-$report = @()
 $drummondSQLquery = @"
 SELECT id,InvoiceNumber,JsonFact 
 FROM [BotAbc].[dbo].[tfact_ApiProcesos] 
 WHERE NitTercero = '800021308' 
+AND Status = 'Recibido Cliente'
 AND Created BETWEEN  
-'2021-01-08' AND '2021-30-08'
+'2021-12-08' AND '2021-14-08'
 "@
-$invoices = SQL_Query $drummondSQLquery
-$i = 0
-foreach ($invoice in $invoices) {
-    JsonData $invoice.id $invoice.InvoiceNumber $invoice.InvoiceNumber.JsonFact 
-    Write-Progress -Activity "Consultando facturas" -Status "Progress:" -PercentComplete ($i / $invoices.count * 100)
-    # Extracción nacionalización data por id de factura
-    $ordenNacIdFacturaQuery = "SELECT TOP(1) [OrdenNacID] FROM [BotAbc].[dbo].[tfact_FactNac] WHERE id_factura = $($invoice.Id)"
-    $ordenNacIdFactura = SQL_Query $ordenNacIdFacturaQuery
-    $ordenNacIdFactura = $ordenNacIdFactura.OrdenNacID
-    # Generación de datros DRUMMOND por número de nacionalización
-    $ReporteDrummondQuery = "[Repecev2005].[dbo].Reporte_Factuacion_Drummon $ordenNacIdFactura"
-    $data = SQL_Query $ReporteDrummondQuery
-    $objReport = New-Object -TypeName PSObject
-    $objReport | Add-Member -MemberType NoteProperty -Name IdFactura -Value $invoice.Id
-    $objReport | Add-Member -MemberType NoteProperty -Name OrdenNacID -Value $data.OrdenNacID
-    $objReport | Add-Member -MemberType NoteProperty -Name Numero_Factura_RPC -Value $invoice.InvoiceNumber
-    $objReport | Add-Member -MemberType NoteProperty -Name Fecha_Facturacion -value $data.Fecha_Facturacion
-    $objReport | Add-Member -MemberType NoteProperty -Name Tasa_de_cambio -value $data.Tasa_de_cambio
-    $objReport | Add-Member -MemberType NoteProperty -Name Valor_Cif -value $data.Valor_Cif
-    $objReport | Add-Member -MemberType NoteProperty -Name Valor_Pesos -value $data.Valor_Pesos
-    $objReport | Add-Member -MemberType NoteProperty -Name DocImpoNoDO -value $data.Do
-    $objReport | Add-Member -MemberType NoteProperty -Name Documento_transporte -value $data.Documento_transporte
-    $objReport | Add-Member -MemberType NoteProperty -Name Fob -value $data.Fob
-    $objReport | Add-Member -MemberType NoteProperty -Name Pedido -value $data.Pedido
-    $report += $objReport 
-    $i = $i + 1
+
+$invoicesList = SQL_Query $drummondSQLquery
+$reporteDrummond = ReporteDrummond $invoicesList
+
+
+$ReportInvoicesCount = $reporteDrummond | Measure-Object
+$ReportInvoicesCount = $ReportInvoicesCount.Count + 1
+
+
+Remove-Item "$PSScriptRoot\data\*.json*"
+
+
+$xlFile = "$PSScriptRoot\ImportExcelExample.xlsx"
+Remove-Item $xlFile -ErrorAction Ignore
+$reporteDrummond | Export-Excel -Path $xlFile -AutoNameRange -AutoSize -Show -CellStyleSB {
+    
+    param (
+        $workSheet
+    ) 
+
+    Set-ExcelRange -Worksheet $WorkSheet -Range "A1:BV1" -Bold
+    Set-ExcelRange -Worksheet $WorkSheet -Range "A1:BV1" -FontName 'Arial' -FontSize 12
+    Set-ExcelRange -Worksheet $WorkSheet -Range "A1:BV$($ReportInvoicesCount)"  -AutoFit
+    Set-ExcelRange -Worksheet $WorkSheet -Range "A1:BV$($ReportInvoicesCount)" -Width 35 -WrapText
+    Set-ExcelRange -Worksheet $WorkSheet -Range "A1:BV$($ReportInvoicesCount)" -HorizontalAlignment Center
+    Set-ExcelRange -Worksheet $WorkSheet -Range "A1:BV$($ReportInvoicesCount)" -VerticalAlignment Center
+    Set-ExcelRange -Worksheet $WorkSheet -Range "A1:BV$($ReportInvoicesCount)" -BorderTop Thin
+    Set-ExcelRange -Worksheet $WorkSheet -Range "A1:BV$($ReportInvoicesCount)" -BorderBottom Thin
+    Set-ExcelRange -Worksheet $WorkSheet -Range "A1:BV$($ReportInvoicesCount)" -BorderLeft Thin
+    Set-ExcelRange -Worksheet $WorkSheet -Range "A1:BV$($ReportInvoicesCount)" -BorderRight Thin
+
+    Set-ExcelRange -Worksheet $WorkSheet -Range "A1:B1" -BackgroundColor White -FontColor Black
+    Set-ExcelRange -Worksheet $WorkSheet -Range "C1:D1" -BackgroundColor Bisque -FontColor Black
+    Set-ExcelRange -Worksheet $WorkSheet -Range "E1" -BackgroundColor SkyBlue -FontColor Black
+    Set-ExcelRange -Worksheet $WorkSheet -Range "F1" -BackgroundColor SkyBlue -FontColor Red
+    Set-ExcelRange -Worksheet $WorkSheet -Range "G1" -BackgroundColor Gold -FontColor Black
+    Set-ExcelRange -Worksheet $WorkSheet -Range "H1:AZ1" -BackgroundColor Bisque -FontColor Black
+    Set-ExcelRange -Worksheet $WorkSheet -Range "BA1" -BackgroundColor Gold -FontColor Black
+    Set-ExcelRange -Worksheet $WorkSheet -Range "BB1:BH1" -BackgroundColor Bisque -FontColor Black
+    Set-ExcelRange -Worksheet $WorkSheet -Range "BI1:BN1" -BackgroundColor Gold -FontColor Black
+    Set-ExcelRange -Worksheet $WorkSheet -Range "BO1" -BackgroundColor SkyBlue -FontColor Black
+    Set-ExcelRange -Worksheet $WorkSheet -Range "BP1" -BackgroundColor Gold -FontColor Black
+    Set-ExcelRange -Worksheet $WorkSheet -Range "BQ1" -BackgroundColor SkyBlue -FontColor Black
+    Set-ExcelRange -Worksheet $WorkSheet -Range "BR1:BS1" -BackgroundColor SkyBlue -FontColor Red
+    Set-ExcelRange -Worksheet $WorkSheet -Range "BT1:BV1" -BackgroundColor SkyBlue -FontColor Black
+
+    Set-ExcelRange -Worksheet $WorkSheet -Range "E2:BN$($ReportInvoicesCount)" -NumberFormat "Currency"
+    Set-ExcelRange -Worksheet $WorkSheet -Range "BT2:BT$($ReportInvoicesCount)" -NumberFormat "Currency"
+    Set-ExcelRange -Worksheet $WorkSheet -Range "BP2:BP$($ReportInvoicesCount)" -NumberFormat "0"
+    Set-ExcelRange -Worksheet $WorkSheet -Range "D2:D$($ReportInvoicesCount)" -NumberFormat "Short Date"
+
 }
-Write-Host "Terminado" -ForegroundColor green
-
-
-# Format-Table -Autosize -Wrap
-
-# $xlFile = "$PSScriptRoot\ImportExcelExample.xlsx"
-# Remove-Item $xlFile -ErrorAction Ignore
-# $report | Export-Excel -Path $xlFile -AutoFilter -AutoNameRange -AutoSize -Show 
 
 
 
