@@ -21,6 +21,10 @@ AND Created BETWEEN
 "@
 
 $invoicesList = SQL_Query $drummondSQLquery
+
+# $invoicesList | Format-Table -AutoSize
+# break
+
 $reporteDrummond = ReporteDrummond $invoicesList
 
 
@@ -29,8 +33,6 @@ $ReportInvoicesCount = $ReportInvoicesCount.Count + 1
 
 
 Remove-Item "$PSScriptRoot\data\*.json*"
-
-
 $xlFile = "$PSScriptRoot\ImportExcelExample.xlsx"
 Remove-Item $xlFile -ErrorAction Ignore
 $reporteDrummond | Export-Excel -Path $xlFile -AutoNameRange -AutoSize -Show -CellStyleSB {

@@ -1,22 +1,22 @@
 {
     "CustomerInformation": {
         "IdentificationType": 31,
-        "Identification": "860535640",
-        "DV": "0",
-        "RegistrationName": "ABC CARGO LOGISTIC S.A.S",
+        "Identification": "900038601",
+        "DV": "6",
+        "RegistrationName": "AIR CARGO PACK S A S",
         "CountryCode": "CO",
         "CountryName": "COLOMBIA",
         "SubdivisionCode": "11",
         "SubdivisionName": "BOGOT\u00c1 ",
         "CityCode": "11001",
         "CityName": "BOGOT\u00c1, D.C.",
-        "AddressLine": "AV CL 24 95 BG 45",
-        "Telephone": "4222388",
-        "Email": "ldiaz@abcmovingrelo.co;facturacion-noreply@abcrepecev.com",
+        "AddressLine": "AV CALLE 26 11 51 TER DE CARGA 1 OF 240 BG COPA",
+        "Telephone": "4138832",
+        "Email": "tesoreria@aircargopack.com;facturacion-noreply@abccargolog.com",
         "CustomerCode": "",
         "AdditionalAccountID": "1",
         "TaxLevelCodeListName": "48",
-        "PostalZone": "110221",
+        "PostalZone": "110111",
         "TaxSchemeCode": "01",
         "TaxSchemeName": "IVA",
         "FiscalResponsabilities": "O-13",
@@ -24,19 +24,19 @@
         "AdditionalCustomer": []
     },
     "InvoiceGeneralInformation": {
-        "InvoiceAuthorizationNumber": "18764014224020",
-        "PreinvoiceNumber": 31018,
-        "InvoiceNumber": "31018",
+        "InvoiceAuthorizationNumber": "18763002568247",
+        "PreinvoiceNumber": 52337,
+        "InvoiceNumber": "52337",
         "DaysOff": "29",
-        "Currency": "COP",
-        "ExchangeRate": 0,
+        "Currency": "USD",
+        "ExchangeRate": 3904.95,
         "ExchangeRateDate": "",
         "SalesPerson": "",
         "Note": "",
         "ExternalGR": true
     },
     "Delivery": {
-        "AddressLine": "AV CL 24 95 BG 45",
+        "AddressLine": "AV CALLE 26 11 51 TER DE CARGA 1 OF 240 BG COPA",
         "CountryCode": "",
         "CountryName": "",
         "SubdivisionCode": "",
@@ -44,7 +44,7 @@
         "CityCode": "",
         "CityName": "",
         "ContactPerson": "",
-        "DeliveryDate": "2021-08-20T12:12:11",
+        "DeliveryDate": "2021-08-23T18:52:43",
         "DeliveryCompany": ""
     },
     "AdditionalDocuments": {
@@ -59,19 +59,19 @@
     "AdditionalProperty": [
         {
             "Name": "Codigo CIIU",
-            "Value": "7010"
+            "Value": "5229"
         },
         {
             "Name": "Fax:",
-            "Value": "4222377"
+            "Value": "4222388"
         },
         {
             "Name": "Tipo de Cambio",
-            "Value": "0"
+            "Value": "3904.95"
         },
         {
             "Name": "AWL\/BL",
-            "Value": "122071210383        "
+            "Value": "111-60124116        "
         },
         {
             "Name": "SUC",
@@ -79,39 +79,39 @@
         },
         {
             "Name": "Peso:",
-            "Value": ""
+            "Value": "947.00 KGS"
         },
         {
             "Name": "Piezas:",
-            "Value": "0"
+            "Value": "64"
         },
         {
             "Name": "Concepto o Referencia:",
-            "Value": "TRASLADO MCIAS"
+            "Value": "419081120145"
         },
         {
             "Name": "No",
-            "Value": " LIGA BIBLICA                 "
+            "Value": "AIR CARGO                     "
         },
         {
             "Name": "Valor en letras:",
-            "Value": "CATORCE MILLONES CIENTO SIETE MIL OCHOCIENTOS CUARENTA Y TRES PESOS M\/CTE"
+            "Value": "UN MILLON OCHO MIL OCHOCIENTOS CUATRO DOLARES CON 78\/100"
         },
         {
             "Name": "Valor mercancia:",
-            "Value": ""
+            "Value": "3904,95"
         },
         {
             "Name": "Observaciones:",
-            "Value": "ORIGEN:CARTAGENA?DESTINO:BOGOTA?DO SOFT CARGO:IT08-00881-2021?TRM:3861.33?CLIENTE:LIGA BIBLICA?DO I"
+            "Value": "41908110475 \/\/ 10475"
         },
         {
             "Name": "Vencimiento:",
-            "Value": "2021-09-19"
+            "Value": "2021-09-22"
         },
         {
             "Name": "TRM:",
-            "Value": ""
+            "Value": "64"
         },
         {
             "Name": "JefeCuenta:",
@@ -129,15 +129,15 @@
     },
     "ItemInformation": [
         {
-            "ItemReference": "2006",
-            "Name": "VR.TRASLADO DE MCIAS TRACTOMULA",
+            "ItemReference": "3011",
+            "Name": "VR. DIFERENCIA EN FLETES",
             "Quatity": 1,
-            "Price": 9556791,
+            "Price": 258.34,
             "LineAllowanceTotal": 0,
             "LineChargeTotal": 0,
             "LineTotalTaxes": 0,
-            "LineTotal": 9556791,
-            "LineExtensionAmount": 9556791,
+            "LineTotal": 0,
+            "LineExtensionAmount": 258.34,
             "MeasureUnitCode": "94",
             "FreeOFChargeIndicator": 0,
             "AdditionalReference": [],
@@ -157,122 +157,15 @@
                     "DV": ""
                 }
             }
-        },
-        {
-            "ItemReference": "2013",
-            "Name": "DEVOLUCION DE CONTENEDOR",
-            "Quatity": 1,
-            "Price": 3600000,
-            "LineAllowanceTotal": 0,
-            "LineChargeTotal": 0,
-            "LineTotalTaxes": 0,
-            "LineTotal": 3600000,
-            "LineExtensionAmount": 3600000,
-            "MeasureUnitCode": "94",
-            "FreeOFChargeIndicator": 0,
-            "AdditionalReference": [],
-            "AdditionalProperty": [
-                {
-                    "Name": "Tipo de Ingreso",
-                    "Value": "PROPIO"
-                }
-            ],
-            "TaxesInformation": [],
-            "AllowanceCharge": [],
-            "InvoiceMandateInformation": {
-                "Mandate": {
-                    "IdentificationType": "",
-                    "Identification": "",
-                    "RegistrationName": "",
-                    "DV": ""
-                }
-            }
-        },
-        {
-            "ItemReference": "2005",
-            "Name": "VR.DESCARGUE MCIAS",
-            "Quatity": 1,
-            "Price": 965332,
-            "LineAllowanceTotal": 0,
-            "LineChargeTotal": 0,
-            "LineTotalTaxes": 183413,
-            "LineTotal": 1148745,
-            "LineExtensionAmount": 965332,
-            "MeasureUnitCode": "94",
-            "FreeOFChargeIndicator": 0,
-            "AdditionalReference": [],
-            "AdditionalProperty": [
-                {
-                    "Name": "Tipo de Ingreso",
-                    "Value": "PROPIO"
-                }
-            ],
-            "TaxesInformation": [
-                {
-                    "Id": "01",
-                    "TaxEvidenceIndicator": false,
-                    "TaxableAmount": 965332,
-                    "TaxAmount": 183413,
-                    "Percent": 19,
-                    "BaseUnitMeasure": "",
-                    "PerUnitAmount": ""
-                },
-                {
-                    "Id": "06",
-                    "TaxEvidenceIndicator": true,
-                    "TaxableAmount": 965332,
-                    "TaxAmount": 170181,
-                    "Percent": 17.6,
-                    "BaseUnitMeasure": "",
-                    "PerUnitAmount": ""
-                }
-            ],
-            "AllowanceCharge": [],
-            "InvoiceMandateInformation": {
-                "Mandate": {
-                    "IdentificationType": "",
-                    "Identification": "",
-                    "RegistrationName": "",
-                    "DV": ""
-                }
-            }
         }
     ],
-    "InvoiceTaxTotal": [
-        {
-            "Id": "01",
-            "TaxEvidenceIndicator": false,
-            "TaxableAmount": 965332,
-            "TaxAmount": 183413,
-            "Percent": 19,
-            "BaseUnitMeasure": "",
-            "PerUnitAmount": ""
-        },
-        {
-            "Id": "05",
-            "TaxEvidenceIndicator": true,
-            "TaxableAmount": 965332,
-            "TaxAmount": 27512,
-            "Percent": 15,
-            "BaseUnitMeasure": "",
-            "PerUnitAmount": ""
-        },
-        {
-            "Id": "06",
-            "TaxEvidenceIndicator": true,
-            "TaxableAmount": 965332,
-            "TaxAmount": 170181,
-            "Percent": 17.6,
-            "BaseUnitMeasure": "",
-            "PerUnitAmount": ""
-        }
-    ],
+    "InvoiceTaxTotal": [],
     "InvoiceAllowanceCharge": [],
     "InvoiceTotalOwn": {
-        "LineExtensionAmount": 14122123,
-        "TaxExclusiveAmount": 965332,
-        "TaxAmount": 183413,
-        "PayableAmount": 14305536
+        "LineExtensionAmount": 258.34,
+        "TaxExclusiveAmount": 0,
+        "TaxAmount": 0,
+        "PayableAmount": 258.34
     },
     "InvoiceTotalOthers": {
         "LineExtensionAmount": 0,
@@ -281,13 +174,13 @@
         "PayableAmount": 0
     },
     "InvoiceTotal": {
-        "LineExtensionAmount": 14122123,
-        "TaxExclusiveAmount": 965332,
-        "TaxInclusiveAmount": 14305536,
+        "LineExtensionAmount": 258.34,
+        "TaxExclusiveAmount": 0,
+        "TaxInclusiveAmount": 258.34,
         "AllowanceTotalAmount": 0,
         "ChargeTotalAmount": 0,
         "PrePaidAmount": 0,
-        "PayableAmount": 14305536
+        "PayableAmount": 258.34
     },
     "Documents": []
 }

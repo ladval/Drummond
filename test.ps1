@@ -170,6 +170,7 @@ function reporteFacturacionDrummond_API {
     $objReport | Add-Member -MemberType NoteProperty -Name "VALOR.FOB US" -Value $reporteFacturacionDrummond_TRK.report_Fob
     $objReport | Add-Member -MemberType NoteProperty -Name "BOOKING" -Value ""
     $objReport | Add-Member -MemberType NoteProperty -Name "LINEA ORDEN DE COMPRA" -Value ""
+    $objReport | Add-Member -MemberType NoteProperty -Name "HOLI" $reporteFacturacionDrummond_TRK.DeclImpoId
     return $objReport
 }  
 
@@ -191,6 +192,14 @@ function reporteFacturacionDrummond_TRK {
 "@
     $OrdenNacID = SQL_Query $OrdenNacIDQuery
     $OrdenNacID = $OrdenNacID.OrdenNacID
+
+    $DeclImpoIDQuery = @"
+SELECT TOP (1) [DeclImpoID]
+  FROM [Repecev2005].[dbo].[IMDeclImpoOtrosDatos]
+  WHERE OrdenNacID = $OrdenNacID
+"@
+    $DeclImpoID = SQL_Query $DeclImpoIDQuery
+    
     # Generación de datros DRUMMOND por número de nacionalización
     $ReporteDrummondQuery = "[Repecev2005].[dbo].Reporte_Factuacion_Drummon $OrdenNacID"
     $data = SQL_Query $ReporteDrummondQuery
@@ -207,7 +216,7 @@ function reporteFacturacionDrummond_TRK {
     $objReportTrk | Add-Member -MemberType NoteProperty -Name report_Fob -value $data.Fob
     $objReportTrk | Add-Member -MemberType NoteProperty -Name report_Pedido -value $data.Pedido
     $objReportTrk | Add-Member -MemberType NoteProperty -Name CONTENEDOR -value $data.CONTENEDOR
-    # $objReportTrk | Format-Table -AutoSize
+    $objReportTrk | Add-Member -MemberType NoteProperty -Name DeclImpoId -value $DeclImpoID.DeclImpoID
     return $objReportTrk
 }
 
