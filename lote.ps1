@@ -1,21 +1,29 @@
 
-function ReporteDrummond() {
+function ReporteLoteDrummond() {
     param (
-        [Object[]]
-        $invoicesList
-    )    
+        [string]
+        $initDate,
+        [string]
+        $endDate
+    )  
+    $drummondSQLquery = @"
+    SELECT id,InvoiceNumber,JsonFact 
+    FROM [BotAbc].[dbo].[tfact_ApiProcesos] 
+    WHERE NitTercero = '800021308' 
+    AND Created BETWEEN  
+    '$initDate' AND '$endDate'
+"@
+    $invoicesList = SQL_Query $drummondSQLquery
     $reporteDrummond = @()
     foreach ($invoice in $invoicesList) {
         Write-Host "=========== $($invoice.InvoiceNumber) ===========" 
         $JsonFile = "$PSScriptRoot\data\$($invoice.InvoiceNumber).json"
         Set-Content -Path $JsonFile -Value $invoice.JsonFact
         $JsonData = Get-Content $JsonFile | ConvertFrom-Json
-
         $IVA = 0
         $RETEIVA = 0
         $RETEFUENTE = 0
         $RETEICA = 0
-        
         foreach ($tax in $JsonData.InvoiceTaxTotal) {
             switch ($tax.Id) {
                 #IVA
@@ -44,7 +52,6 @@ function ReporteDrummond() {
                 }
             }
         }
-
         $objInvoiceTotals = New-Object -TypeName psobject
         $objInvoiceTotals | Add-Member -MemberType NoteProperty -Name "InvoiceTotalOwn" -Value $JsonData.InvoiceTotalOwn.LineExtensionAmount
         $objInvoiceTotals | Add-Member -MemberType NoteProperty -Name "InvoiceTotalOthers" -Value $JsonData.InvoiceTotalOthers.LineExtensionAmount
@@ -77,11 +84,9 @@ function ReporteDrummond() {
         $reporteAPI = reporteFacturacionDrummond_API $reporteTRK $oItemInformation $JsonData
         $reporteDrummond += $reporteAPI
     }
-    return $reporteDrummond 
+    Remove-Item "$PSScriptRoot\data\*.json*"
+    return $reporteDrummond
 }
-
-
-
 
 function reporteFacturacionDrummond_API {
     param (
@@ -93,11 +98,11 @@ function reporteFacturacionDrummond_API {
         $JsonData
     )    
 
-
+    $report_Numero_Factura_RPC = $reporteFacturacionDrummond_TRK.report_Numero_Factura_RPC
     $objReport = New-Object -TypeName PSObject
     $objReport | Add-Member -MemberType NoteProperty -Name "LOTE" -Value $(ItemData $oItemInformation '0000')
     $objReport | Add-Member -MemberType NoteProperty -Name "SERVICIO" -Value $(ItemData $oItemInformation '0000')
-    $objReport | Add-Member -MemberType NoteProperty -Name "INVOICE" -Value $reporteFacturacionDrummond_TRK.report_Numero_Factura_RPC
+    $objReport | Add-Member -MemberType NoteProperty -Name "INVOICE" -Value $report_Numero_Factura_RPC
     $objReport | Add-Member -MemberType NoteProperty -Name "INVOICE DATE" -Value $reporteFacturacionDrummond_TRK.report_Fecha_Facturacion
     $objReport | Add-Member -MemberType NoteProperty -Name "CIF US $" -Value $reporteFacturacionDrummond_TRK.report_Valor_Cif
     $objReport | Add-Member -MemberType NoteProperty -Name "TCRM" -Value $reporteFacturacionDrummond_TRK.report_Tasa_de_cambio
@@ -168,14 +173,30 @@ function reporteFacturacionDrummond_API {
     $objReport | Add-Member -MemberType NoteProperty -Name "CONTENEDOR" -Value $reporteFacturacionDrummond_TRK.CONTENEDOR
     $objReport | Add-Member -MemberType NoteProperty -Name "OBSERVACIONES" -Value ""
     $objReport | Add-Member -MemberType NoteProperty -Name "VALOR.FOB US" -Value $reporteFacturacionDrummond_TRK.report_Fob
-    $objReport | Add-Member -MemberType NoteProperty -Name "BOOKING" -Value ""
-    $objReport | Add-Member -MemberType NoteProperty -Name "LINEA ORDEN DE COMPRA" -Value ""
-    $objReport | Add-Member -MemberType NoteProperty -Name "HOLI" $reporteFacturacionDrummond_TRK.DeclImpoId
+    $objReport | Add-Member -MemberType NoteProperty -Name "BOOKING" -Value $(CosteoDrummondGnral $report_Numero_Factura_RPC 'FACTURA')
+    $objReport | Add-Member -MemberType NoteProperty -Name "LINEA ORDEN DE COMPRA" -Value $(CosteoDrummondGnral $report_Numero_Factura_RPC 'LINEA')
     return $objReport
 }  
 
+function CosteoDrummondGnral() {
+    param (
+        [string]$invoiceNumber,
+        [string]$dbFieldName,
+        [int]$invoiceTotal
+    )
+    $VCosteoDrummondQuery = "SELECT * FROM [Repecev2005].[dbo].[VCosteoDrummond_fact] WHERE FACTURASERVICIOS LIKE '$invoiceNumber'"
+    $VCosteoDrummond = SQL_Query $VCosteoDrummondQuery
+    if ($dbFieldName.Length -gt 0) {
+        foreach ($itemCosteo in $VCosteoDrummond) {
+            $dbFieldValue = $itemCosteo.$dbFieldName
+            If ($dbFieldValue.Length -gt 0) {
+                return $dbFieldValue
+            }
 
-
+        }
+        return 0
+    }
+}
 
 
 function reporteFacturacionDrummond_TRK {
@@ -198,6 +219,7 @@ SELECT TOP (1) [DeclImpoID]
   FROM [Repecev2005].[dbo].[IMDeclImpoOtrosDatos]
   WHERE OrdenNacID = $OrdenNacID
 "@
+
     $DeclImpoID = SQL_Query $DeclImpoIDQuery
     
     # Generación de datros DRUMMOND por número de nacionalización

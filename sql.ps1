@@ -1,7 +1,3 @@
-
-
-
-
 function SQL_Query($Query) {
     if ([string]::IsNullOrEmpty($Query)) {
         Write-Output 'EmptyString'
