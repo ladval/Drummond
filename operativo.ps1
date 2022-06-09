@@ -5,7 +5,8 @@ function ReporteOperativoDrummond() {
         [string]
         $initDate,
         [string]
-        $endDate
+        $endDate,
+        $objInvoiceTotals
     )  
     $drummondOperativoSQLquery = @"
     SELECT id,InvoiceNumber,JsonFact 
@@ -27,11 +28,38 @@ function ReporteOperativoDrummond() {
 "@
             $facturaServiciosSqlData = SQL_Query $facturaServiciosSqlQuery
             $JsonData = $facturaServiciosSqlData.JsonFact | ConvertFrom-Json
-            $invoiceTotal = $JsonData.InvoiceTotal.PayableAmount - ($objInvoiceTotals.InvoiceRETEIVA + $objInvoiceTotals.InvoiceRETEICA + $objInvoiceTotals.InvoiceAnticipo)
+
+
+            $JsonFile = "$PSScriptRoot\data\$($facturaServicios).json"
+            $JsonData = Get-Content $JsonFile | ConvertFrom-Json
+            $RETEIVA = 0
+            $RETEFUENTE = 0
+            $RETEICA = 0
+            foreach ($tax in $JsonData.InvoiceTaxTotal) {
+                switch ($tax.Id) {
+                    #RETEIVA
+                    "05" { 
+                        $RETEIVA = $tax.TaxAmount
+                    }
+                    #RETEFUENTE
+                    "06" { 
+                        $RETEFUENTE = $tax.TaxAmount
+                    }
+                    #RETEICA
+                    "07" { 
+                        $RETEICA = $tax.TaxAmount
+                    }
+                }
+            }
+            $invoiceTotal = $JsonData.InvoiceTotal.PayableAmount - ($RETEIVA + $RETEFUENTE + $RETEICA + $JsonData.InvoiceTotal.PrePaidAmount)
             $itemCosteoDrummond.VALORFACTURA = $invoiceTotal
+            $itemCosteoDrummond.PEDIDO = "'$($itemCosteoDrummond.PEDIDO)"
         }
         $reporteDrummondOperativo += $VCosteoDrummond
     }
+    
+    
+
     return $reporteDrummondOperativo
 }
 

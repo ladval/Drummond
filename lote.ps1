@@ -7,12 +7,13 @@ function ReporteLoteDrummond() {
         $endDate
     )  
     $drummondSQLquery = @"
-    SELECT id,InvoiceNumber,JsonFact 
+    SELECT id,InvoiceNumber,JsonFact,FechaFact 
     FROM [BotAbc].[dbo].[tfact_ApiProcesos] 
-    WHERE NitTercero = '800021308' 
+    WHERE NitTercero = '800021308'
     AND Created BETWEEN  
     '$initDate' AND '$endDate'
 "@
+
     $invoicesList = SQL_Query $drummondSQLquery
     $reporteDrummond = @()
     foreach ($invoice in $invoicesList) {
@@ -81,10 +82,10 @@ function ReporteLoteDrummond() {
         }
 
         $reporteTRK = reporteFacturacionDrummond_TRK $invoice.id $invoice.InvoiceNumber
-        $reporteAPI = reporteFacturacionDrummond_API $reporteTRK $oItemInformation $JsonData
+        $reporteAPI = reporteFacturacionDrummond_API $reporteTRK $oItemInformation $invoice.FechaFact
         $reporteDrummond += $reporteAPI
     }
-    Remove-Item "$PSScriptRoot\data\*.json*"
+    # Remove-Item "$PSScriptRoot\data\*.json*"
     return $reporteDrummond
 }
 
@@ -95,15 +96,18 @@ function reporteFacturacionDrummond_API {
         [Object[]]
         $oItemInformation,
         [string]
-        $JsonData
+        $dateFact
     )    
 
+    $dateFact = $($dateFact.substring(0, 10))
+  
+ 
     $report_Numero_Factura_RPC = $reporteFacturacionDrummond_TRK.report_Numero_Factura_RPC
     $objReport = New-Object -TypeName PSObject
     $objReport | Add-Member -MemberType NoteProperty -Name "LOTE" -Value $(ItemData $oItemInformation '0000')
     $objReport | Add-Member -MemberType NoteProperty -Name "SERVICIO" -Value $(ItemData $oItemInformation '0000')
     $objReport | Add-Member -MemberType NoteProperty -Name "INVOICE" -Value $report_Numero_Factura_RPC
-    $objReport | Add-Member -MemberType NoteProperty -Name "INVOICE DATE" -Value $reporteFacturacionDrummond_TRK.report_Fecha_Facturacion
+    $objReport | Add-Member -MemberType NoteProperty -Name "INVOICE DATE" -Value $dateFact
     $objReport | Add-Member -MemberType NoteProperty -Name "CIF US $" -Value $reporteFacturacionDrummond_TRK.report_Valor_Cif
     $objReport | Add-Member -MemberType NoteProperty -Name "TCRM" -Value $reporteFacturacionDrummond_TRK.report_Tasa_de_cambio
     $objReport | Add-Member -MemberType NoteProperty -Name "CIF COP $" -Value $reporteFacturacionDrummond_TRK.report_Valor_Pesos
@@ -145,7 +149,7 @@ function reporteFacturacionDrummond_API {
     $objReport | Add-Member -MemberType NoteProperty -Name "SELLOS DE CONTENEDOR" -Value $(ItemData $oItemInformation '1051')
     $objReport | Add-Member -MemberType NoteProperty -Name "ENVIO" -Value $(ItemData $oItemInformation '1031')
     $objReport | Add-Member -MemberType NoteProperty -Name "DISMOUNTING" -Value $(ItemData $oItemInformation '1012')
-    $objReport | Add-Member -MemberType NoteProperty -Name "TRASPORTE" -Value $(ItemData $oItemInformation '1027')
+    $objReport | Add-Member -MemberType NoteProperty -Name "TRANSPORTE" -Value $(ItemData $oItemInformation '1027')
     $objReport | Add-Member -MemberType NoteProperty -Name "ADICIONAL 1" -Value $(ItemData $oItemInformation '1022')
     $objReport | Add-Member -MemberType NoteProperty -Name "ADICIONAL 2" -Value $(ItemData $oItemInformation '1032')
     $objReport | Add-Member -MemberType NoteProperty -Name "ADICIONAL 3" -Value $(ItemData $oItemInformation '1041')
@@ -161,7 +165,6 @@ function reporteFacturacionDrummond_API {
     $objReport | Add-Member -MemberType NoteProperty -Name "DESCARGUE DIRECTO" -Value $(ItemData $oItemInformation '2007')
     $objReport | Add-Member -MemberType NoteProperty -Name "VISTO BUENO" -Value $(ItemData $oItemInformation '2045')
     $objReport | Add-Member -MemberType NoteProperty -Name "SUBTOTAL PROP" -Value $($objInvoiceTotals.InvoiceTotalOwn)
-
     $objReport | Add-Member -MemberType NoteProperty -Name "IVA PROP" -Value $objInvoiceTotals.InvoiceIVA
     $objReport | Add-Member -MemberType NoteProperty -Name "RETE IVA" -Value $objInvoiceTotals.InvoiceRETEIVA
     $objReport | Add-Member -MemberType NoteProperty -Name "RETE ICA" -Value $objInvoiceTotals.InvoiceRETEICA

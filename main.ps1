@@ -9,8 +9,9 @@ $Global:oJsonSettings = Get-Content -Path $JsonConfigFile | ConvertFrom-Json
 . "$PSScriptRoot\lote.ps1"
 . "$PSScriptRoot\operativo.ps1"
 
-$initDate = "2021-03-09"
-$endDate = "2021-06-09"
+$initDate = "2022-04-03" #La fecha inicial corresponde a la solicitada y la final es un día después de la solicitada
+$endDate = "2022-05-03" 
+
 
 $ReporteLoteDrummond = ReporteLoteDrummond $initDate $endDate
 $ReporteLoteCount = $ReporteLoteDrummond | Measure-Object
@@ -80,7 +81,8 @@ $ReporteOperativoDrummond | Select-Object -Property  * -ExcludeProperty RowError
 
     Set-ExcelRange -Worksheet $WorkSheet -Range "A1:A$($ReporteOperativoCount)" -NumberFormat "0"
     Set-ExcelRange -Worksheet $WorkSheet -Range "B1:B$($ReporteOperativoCount)" -NumberFormat "0"
-    Set-ExcelRange -Worksheet $WorkSheet -Range "C1:D$($ReporteOperativoCount)" -NumberFormat "0"
+    Set-ExcelRange -Worksheet $WorkSheet -Range "C1:C$($ReporteOperativoCount)" -NumberFormat "0"
+    Set-ExcelRange -Worksheet $WorkSheet -Range "C1:C$($ReporteOperativoCount)" -NumberFormat "Text"
     Set-ExcelRange -Worksheet $WorkSheet -Range "H1:H$($ReporteOperativoCount)" -NumberFormat "Currency"
     Set-ExcelRange -Worksheet $WorkSheet -Range "K1:K$($ReporteOperativoCount)" -NumberFormat "0"
     Set-ExcelRange -Worksheet $WorkSheet -Range "L1:L$($ReporteOperativoCount)" -NumberFormat "Short Date"
@@ -92,3 +94,4 @@ $ReporteOperativoDrummond | Select-Object -Property  * -ExcludeProperty RowError
     Set-ExcelRange -Worksheet $WorkSheet -Range "AF:AF$($ReporteOperativoCount)" -NumberFormat "Short Date"
     Set-ExcelRange -Worksheet $WorkSheet -Range "AI:AI$($ReporteOperativoCount)" -NumberFormat "Currency"
 }
+Remove-Item "$PSScriptRoot\data\*.json*"
